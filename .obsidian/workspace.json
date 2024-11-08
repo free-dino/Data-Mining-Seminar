@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "KaTeX help.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "KaTeX help"
+              "title": "README"
             }
           },
           {
@@ -194,11 +194,13 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "cicada-sync:CI-SYNC": false
     }
   },
-  "active": "ef6f77b747ed979f",
+  "active": "5e7f00acb62ac904",
   "lastOpenFiles": [
+    "KaTeX help.md",
     "Notes/Sáng/Yêu cầu..md",
     "books/Book3-MiningOfMassiveDatasets.pdf",
     "books/Book2-DataMiningTheTextbook.pdf",
@@ -206,7 +208,6 @@
     "Notes/Sáng",
     "preamble.sty",
     "Notes",
-    "KaTeX help.md",
     "books",
     "Pasting.md",
     "image/Pasted image 20241108145346.png",
