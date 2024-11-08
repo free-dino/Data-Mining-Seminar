@@ -1,0 +1,4 @@
+- Phát triển phần cứng -> thu thập dữ liệu ở tần suất cao hơn. VD: thẻ tín dụng, điện thoại.
+- Các cảm biến, thiết bị di dộng
+- Assumption: Dữ liệu liên tục tích lũy theo thời gian với tốc độ nhanh chóng
+- 

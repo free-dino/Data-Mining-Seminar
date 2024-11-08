@@ -3,7 +3,7 @@ Bài toán, ý nghĩa, ứng dụng, tiếp cận giải quyết, phương pháp
 Min:  25 slide. 20 phút.
 
 Phân việc: 
-
+Book 1:
 Introduction
 Synopsis Data Structure for Streams
 - Reservoir Sampling
