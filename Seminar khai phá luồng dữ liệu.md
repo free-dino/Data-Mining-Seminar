@@ -76,7 +76,7 @@ Cung cấp các kiến thức về:
 - ## Giới thiệu về Phân lớp luồng dữ liệu:
   - Các thách thức chính trong phân loại luồng dữ liệu
   - Thuật toán và phương pháp:
-    - Họ Cây Quyết Định rất nhah (VFDT)
+    - Họ Cây Quyết Định rất nhanh (VFDT)
     - Các phương pháp vi cụm có giám sát
     - Các phương pháp hợp (ensemble) để nâng cao độ chính xác
   - Phân lớp trong các miền lớn và xử lý trôi dạt khái niệm.
