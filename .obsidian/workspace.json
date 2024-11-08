@@ -25,10 +25,14 @@
             "id": "0b1273ba7660a192",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Sáng/Yêu cầu..md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Yêu cầu."
             }
           },
           {
@@ -199,12 +203,12 @@
   },
   "active": "30c701290aaec77d",
   "lastOpenFiles": [
+    "Notes/Sáng/Yêu cầu..md",
+    "Seminar khai phá luồng dữ liệu.md",
     "Main note for the seminar..md",
     "books/Book2-DataMiningTheTextbook.pdf",
     "Notes/Sáng/Book 2/Introduction.md",
-    "Notes/Sáng/Yêu cầu..md",
     "README.md",
-    "Seminar khai phá luồng dữ liệu.md",
     "Notes/Sáng/Book 2",
     "Notes/Sáng/Untitled.md",
     "books/Book3-MiningOfMassiveDatasets.pdf",
