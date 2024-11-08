@@ -25,13 +25,28 @@
             "id": "1960ab40228091f4",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "pdf",
+              "state": {
+                "file": "books/Book2-DataMiningTheTextbook.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Book2-DataMiningTheTextbook"
+            }
+          },
+          {
+            "id": "d079a818b5f3316c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "books/Book3-MiningOfMassiveDatasets.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Book3-MiningOfMassiveDatasets"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -87,7 +102,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "56bba8ecdb245ebf",
@@ -183,16 +199,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5e7f00acb62ac904",
+  "active": "d079a818b5f3316c",
   "lastOpenFiles": [
-    "README.md",
     "Notes/Sáng/Yêu cầu..md",
+    "books/Book2-DataMiningTheTextbook.pdf",
+    "books/Book3-MiningOfMassiveDatasets.pdf",
+    "README.md",
     "Notes/Sáng",
     "preamble.sty",
     "Notes",
     "KaTeX help.md",
-    "books/Book3-MiningOfMassiveDatasets.pdf",
-    "books/Book2-DataMiningTheTextbook.pdf",
     "books",
     "Pasting.md",
     "image/Pasted image 20241108145346.png",
