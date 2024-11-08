@@ -44,4 +44,5 @@ Về cơ bản KaTeX là bản nhỏ gọn hơn của LaTeX.
 - Các vấn đề mở.
 # 3. Đối với các notes có công thức toán.
 - Mình mong các bạn giải nghĩa đc các công thức toán và tạo link dẫn đến phần chứng minh trong folder proofs.
+- Mình cần các bạn đọc và hiểu chứ ko phải chép. Viết dai viết dài càng tốt, dễ hiểu là đc. 
 

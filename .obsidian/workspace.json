@@ -11,14 +11,12 @@
             "id": "30c701290aaec77d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Notes/Sáng/Yêu cầu..md",
-                "mode": "source",
-                "source": false
+                "file": "books/Book2-DataMiningTheTextbook.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Yêu cầu."
+              "icon": "lucide-file-text",
+              "title": "Book2-DataMiningTheTextbook"
             }
           },
           {
@@ -34,8 +32,21 @@
               "icon": "lucide-file",
               "title": "Yêu cầu."
             }
+          },
+          {
+            "id": "03677b6968ef7710",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "books/Book3-MiningOfMassiveDatasets.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Book3-MiningOfMassiveDatasets"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -91,7 +102,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "56bba8ecdb245ebf",
@@ -187,18 +199,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "30c701290aaec77d",
+  "active": "e2e264c9187e585c",
   "lastOpenFiles": [
+    "books/Book3-MiningOfMassiveDatasets.pdf",
+    "Notes/Sáng/Yêu cầu..md",
+    "books/Book2-DataMiningTheTextbook.pdf",
     "README.md",
     "Proofs",
-    "Notes/Sáng/Yêu cầu..md",
     "Main note for the seminar..md",
     "KaTeX help.md",
     "Test from Sáng.md",
     "Test from Trung.md",
     "conflict-files-obsidian-git.md",
-    "books/Book3-MiningOfMassiveDatasets.pdf",
-    "books/Book2-DataMiningTheTextbook.pdf",
     "Notes/Sáng",
     "preamble.sty",
     "Notes",

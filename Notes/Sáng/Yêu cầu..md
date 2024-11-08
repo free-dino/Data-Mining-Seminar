@@ -1,6 +1,6 @@
 Bài toán, ý nghĩa, ứng dụng, tiếp cận giải quyết, phương pháp đánh giá, các vấn đề mở.
 
-Min: slide.
+Min:  25 slide. 20 phút.
 
 Phân việc: 
 
@@ -34,3 +34,42 @@ Streaming Classification
 - Supervised Microcluster Approach
 - Ensemble Method
 - Massive-Domain Streaming Classification
+
+Tuy nhiên đối chiếu với book 3:
+The stream data model
+- A Data-stream-management system
+- Examples of Stream source
+- Stream queries
+- Issues in stream processing
+Sampling data in a Stream
+- Example
+- Obtaining a Representative Sample
+- The General Sampling Problem
+- Varying the Sample Size
+Filtering Streams
+- Example
+- The Bloom Filter
+- Analysis of Bloom Filtering
+Counting Distinct Elements in a Stream
+- The Count-Distinct Problem
+- The Flajolet-Martin Algorithm
+- Combining Estimates
+- Space Requirements
+Estimating Moments
+- Definition of Moments
+- The Alon-Matias-Szegedy Algorithm for Second Moments
+- Why the Alon-Matias-Szegedy Algorithm Works
+- Higher-Order Moments
+- Dealing With Infinite Streams
+Counting Ones in a Window
+- The Cost of Exact Counts
+- The Datar-Gionis-Indyk-Motwani Algorithm
+- Storage Requirements for the DGIM Algorithm
+- Query Answering in the DGIM Algorithm
+- Maintaining the DGIM Conditions
+- Reducing the Error
+- Extensions to the Counting of Ones
+Decaying Windows
+- The Problem of Most-Common Elements
+- Definition of the Decaying Window
+- Finding the Most Popular Elements
