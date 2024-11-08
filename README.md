@@ -22,10 +22,15 @@ Sau đó, mở Obsidian lên, bạn sẽ màn hình này hiện lên:
 
 Ấn vào Open folder as vault, chọn folder vừa clone về và bắt đầu, màn hình làm việc sẽ hiện lên.
 
+Bây giờ thay vì đọc đống README này, bạn nên đọc trong Obsidian để tương tác và hiểu cách dùng hơn.
+
 ## 1.3. Viết biểu thức toán học bằng KaTeX.
 
- Về cơ bản KaTeX là bản nhỏ gọn hơn của LaTeX.
+Về cơ bản KaTeX là bản nhỏ gọn hơn của LaTeX.
 
 Có 2 loại biểu thức toán học, viết cùng dòng và viết xuống dòng.
 
-- **Viết cùng dòng**: bắt đầu bằng cách viết \$$ và bắt đầu viết biểu thức toán học ở giữa, biểu thức toán học sẽ đc in ra màn hình.  
+- **Viết cùng dòng**: bắt đầu bằng cách viết \$$ và bắt đầu viết biểu thức toán học ở giữa, biểu thức sẽ đc viết ngang hàng với chữ viết.
+- **Viết xuống dòng**: Bắt đầu với \$\$\$$ và cũng bắt đầu viết ở giữa, biểu thức sẽ đc viết xuống dòng và căn giữa.
+
+Đối với hệ phương trình, sử dụng: \begin{cases} \end{case}
