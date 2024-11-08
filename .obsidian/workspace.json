@@ -27,26 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Main note for the data.md",
+                "file": "Main note for the seminar..md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Main note for the data"
+              "title": "Main note for the seminar."
             }
           },
           {
             "id": "30c701290aaec77d",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -198,10 +198,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "51d26c33d6ce5ff8",
+  "active": "30c701290aaec77d",
   "lastOpenFiles": [
+    "Main note for the seminar..md",
     "Notes/Sáng/Yêu cầu..md",
-    "Main note for the data.md",
     "README.md",
     "KaTeX help.md",
     "Test from Sáng.md",

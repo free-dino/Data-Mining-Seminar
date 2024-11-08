@@ -13,6 +13,13 @@
         "a": 1,
         "rgb": 14701138
       }
+    },
+    {
+      "query": "file:Main note for the seminar",
+      "color": {
+        "a": 1,
+        "rgb": 110288
+      }
     }
   ],
   "collapse-display": true,
