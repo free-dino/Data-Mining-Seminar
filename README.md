@@ -21,3 +21,11 @@ Sau đó, mở Obsidian lên, bạn sẽ màn hình này hiện lên:
 ![Obsidian](image/Pasted%20image%2020241108145346.png)
 
 Ấn vào Open folder as vault, chọn folder vừa clone về và bắt đầu, màn hình làm việc sẽ hiện lên.
+
+## 1.3. Viết biểu thức toán học bằng KaTeX.
+
+ Về cơ bản KaTeX là bản nhỏ gọn hơn của LaTeX.
+
+Có 2 loại biểu thức toán học, viết cùng dòng và viết xuống dòng.
+
+- **Viết cùng dòng**: bắt đầu bằng cách viết \$$ và bắt đầu viết biểu thức toán học ở giữa, biểu thức toán học sẽ đc in ra màn hình.  
