@@ -16,8 +16,8 @@ Có thể chuột phải trên màn hình, ấn vào Open git bash here. Gõ:
 git clone https://github.com/free-dino/Data-Mining-Seminar.git
 ```
 
-Sau đó, mở Obsidian lên, bạn sẽ thấy một hình đại diện như này:
+Sau đó, mở Obsidian lên, bạn sẽ màn hình này hiện lên:
 
 ![Obsidian](image/Pasted%20image%2020241108145346.png)
 
-Ấn vào Open folder as vault và màn hình làm việc sẽ hiện lên.
+Ấn vào Open folder as vault, chọn folder vừa clone về và bắt đầu, màn hình làm việc sẽ hiện lên.
