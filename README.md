@@ -8,7 +8,7 @@ Truy cập trang web: [Download - Obsidian](https://obsidian.md/download) để 
 ## 1.2. Clone repo này về máy.
 ### 1.2.1: Clone bằng git bash.
 Git bash: 
-![Git ](obsidian://open?vault=Data-Mining-Seminar&file=Pasting%20photo%2FPasted%20image%2020241108143813.png)
+![Git bash](image/Pasted%20image%2020241108143813.png)
 
 Có thể chuột phải trên màn hình, ấn vào Open git bash here. Gõ:
 ```
