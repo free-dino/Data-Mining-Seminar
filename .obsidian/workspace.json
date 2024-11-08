@@ -31,8 +31,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,10 +183,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1960ab40228091f4",
+  "active": "5e7f00acb62ac904",
   "lastOpenFiles": [
-    "preamble.sty",
     "README.md",
+    "preamble.sty",
     "Notes",
     "KaTeX help.md",
     "books/Book3-MiningOfMassiveDatasets.pdf",

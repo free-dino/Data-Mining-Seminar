@@ -30,3 +30,6 @@ Về cơ bản KaTeX là bản nhỏ gọn hơn của LaTeX.
 
 Đọc cách viết Toán ở [[KaTeX help|đây]]. <-- Nhấn vào cái link này
 
+## Tạo folder riêng trong Notes
+
+
