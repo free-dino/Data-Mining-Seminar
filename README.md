@@ -30,10 +30,12 @@ Về cơ bản KaTeX là bản nhỏ gọn hơn của LaTeX.
 
 Đọc cách viết Toán ở [[KaTeX help|đây]]. <-- Nhấn vào cái link này
 
-## 1.4. Tạo folder riêng trong Notes
+## 1.4. Tạo folder riêng trong Note
  - Đây là việc của mọi người.
  - Mình mong mọi người tạo mỗi file riêng cho một chủ đề khác nhau.
-# 2. Yêu cầu của mỗi notes:
+## 1.5 Commit và push note của mọi người lên github:
+- NHỚ COMMIT VÀ PUSH LÊN . 
+# 2. Yêu cầu của mỗi note:
 - Bài toán
 - Ý nghĩa
 - Ứng dụng

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Notes/Sáng/Yêu cầu..md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Yêu cầu."
             }
           },
           {
@@ -187,11 +187,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4a8d69acca0fb1e4",
+  "active": "30c701290aaec77d",
   "lastOpenFiles": [
+    "README.md",
     "Proofs",
     "Notes/Sáng/Yêu cầu..md",
-    "README.md",
     "Main note for the seminar..md",
     "KaTeX help.md",
     "Test from Sáng.md",
