@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Seminar khai phá dòng dữ liệu.md",
+                "file": "Seminar khai phá luồng dữ liệu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Seminar khai phá dòng dữ liệu"
+              "title": "Seminar khai phá luồng dữ liệu"
             }
           }
         ],
@@ -206,7 +206,7 @@
   "active": "ebb43dfa8fcea5e3",
   "lastOpenFiles": [
     "Notes/Sáng/Yêu cầu..md",
-    "Seminar khai phá dòng dữ liệu.md",
+    "Seminar khai phá luồng dữ liệu.md",
     "books/Book2-DataMiningTheTextbook.pdf",
     "Notes/Sáng/Book 2/Introduction.md",
     "Notes/Sáng/Book 2",
