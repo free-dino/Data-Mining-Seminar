@@ -11,10 +11,14 @@
             "id": "2e60250f48056cfb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Test from Trung.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Test from Trung"
             }
           }
         ]
@@ -134,9 +138,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Test from Trung.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Test from Trung"
             }
           },
           {
