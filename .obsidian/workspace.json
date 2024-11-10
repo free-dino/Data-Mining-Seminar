@@ -11,12 +11,14 @@
             "id": "30c701290aaec77d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "books/Book2-DataMiningTheTextbook.pdf"
+                "file": "Notes/Sáng/Yêu cầu..md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Book2-DataMiningTheTextbook"
+              "icon": "lucide-file",
+              "title": "Yêu cầu."
             }
           }
         ]
@@ -173,12 +175,12 @@
   },
   "active": "30c701290aaec77d",
   "lastOpenFiles": [
-    "README.md",
-    "preamble.sty~",
     "Seminar khai phá luồng dữ liệu.md",
-    "Notes/Sáng/Yêu cầu..md",
     "Main note for the seminar..md",
     "books/Book2-DataMiningTheTextbook.pdf",
+    "README.md",
+    "preamble.sty~",
+    "Notes/Sáng/Yêu cầu..md",
     "Notes/Sáng/Book 2/Introduction.md",
     "Notes/Sáng/Book 2",
     "Notes/Sáng/Untitled.md",
