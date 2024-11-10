@@ -11,13 +11,14 @@
             "id": "eed13b04c56550c6",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
+              "type": "markdown",
               "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": false
+                "file": "Seminar khai phá luồng dữ liệu.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "git-pull-request",
-              "title": "Diff View (workspace.json)"
+              "icon": "lucide-file",
+              "title": "Seminar khai phá luồng dữ liệu"
             }
           },
           {
@@ -182,12 +183,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "eed13b04c56550c6",
+  "active": "ef6f77b747ed979f",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "Seminar khai phá luồng dữ liệu.md",
+    "Main note for the seminar..md",
+    "preamble.sty",
+    "books/Book2-DataMiningTheTextbook.pdf",
+    "Notes/Sáng/Yêu cầu..md",
+    "Notes/Sáng",
+    "Notes",
     "README.md",
     "KaTeX help.md",
     "books/Book3-MiningOfMassiveDatasets.pdf",
-    "books/Book2-DataMiningTheTextbook.pdf",
     "books",
     "Pasting.md",
     "image/Pasted image 20241108145346.png",

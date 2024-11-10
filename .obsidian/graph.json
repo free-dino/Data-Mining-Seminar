@@ -5,8 +5,28 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
+<<<<<<< HEAD
   "collapse-color-groups": true,
   "colorGroups": [],
+=======
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:Notes/Sáng  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "file:Main note for the seminar",
+      "color": {
+        "a": 1,
+        "rgb": 110288
+      }
+    }
+  ],
+>>>>>>> origin/main
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -18,5 +38,9 @@
   "linkStrength": 1,
   "linkDistance": 250,
   "scale": 1,
+<<<<<<< HEAD
   "close": false
+=======
+  "close": true
+>>>>>>> origin/main
 }
