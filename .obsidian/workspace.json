@@ -19,8 +19,35 @@
               "icon": "git-pull-request",
               "title": "Diff View (workspace.json)"
             }
+          },
+          {
+            "id": "a0a60b49b749cc13",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/appearance.json",
+                "staged": true
+              },
+              "icon": "git-pull-request",
+              "title": "Diff View (appearance.json)"
+            }
+          },
+          {
+            "id": "0b43225e4e8b1fc4",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/appearance.json",
+                "staged": true
+              },
+              "icon": "git-pull-request",
+              "title": "Diff View (appearance.json)"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -172,8 +199,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "30c701290aaec77d",
+  "active": "0b43225e4e8b1fc4",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
     "Seminar khai phá luồng dữ liệu.md",
     "Notes/Sáng/Yêu cầu..md",
     "README.md",
@@ -188,7 +216,6 @@
     "KaTeX help.md",
     "Test from Sáng.md",
     "Test from Trung.md",
-    "conflict-files-obsidian-git.md",
     "Notes/Sáng",
     "preamble.sty",
     "Notes",
