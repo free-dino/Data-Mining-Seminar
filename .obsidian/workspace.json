@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4eaf43c16026fe98",
+        "id": "b44712f92548d27f",
         "type": "tabs",
         "children": [
           {
-            "id": "ad376916f8573d39",
+            "id": "37c6b9231c49875c",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -169,14 +169,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ad376916f8573d39",
+  "active": "37c6b9231c49875c",
   "lastOpenFiles": [
+    "KaTeX help.md",
     "Test from Sáng.md",
     "Test from Trung.md",
     "New Text Document.txt",
     "conflict-files-obsidian-git.md",
     "README.md",
-    "KaTeX help.md",
     "Notes/Sáng/Yêu cầu..md",
     "books/Book3-MiningOfMassiveDatasets.pdf",
     "books/Book2-DataMiningTheTextbook.pdf",
