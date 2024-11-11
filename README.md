@@ -1,10 +1,10 @@
 # Data-Mining-Seminar
 
-Đây là repo cho bài tập seminar với chủ đề là: "Mining Streams Data". Những gì chúng ta cần làm là đọc và viết.
+Đây là repo cho bài tập seminar với chủ đề là: "Mining Streams Data". Đây là những gì bạn cần để bắt đầu.
 
 # 1. Giới thiệu về cách làm việc với Obsidian.
 ## 1.1. Tải Obsidian về máy.
-Truy cập trang web: [Download - Obsidian](https://obsidian.md/download) để tải Obsidian về máy. Đừng mở vội.
+Truy cập trang web: [Download - Obsidian](https://obsidian.md/download) để tải Obsidian về máy và cài đặt.
 ## 1.2. Clone repo này về máy bằng git bash hoặc terminal
 
 Git bash: 
@@ -16,7 +16,7 @@ Có thể chuột phải trên màn hình, ấn vào Open git bash here. Gõ:
 git clone https://github.com/free-dino/Data-Mining-Seminar.git
 ```
 
-Sau đó, mở Obsidian lên, bạn sẽ màn hình này hiện lên:
+Sau đó, mở Obsidian lên, bạn sẽ thấy màn hình này hiện lên:
 
 ![Obsidian](image/Pasted%20image%2020241108145346.png)
 
@@ -30,6 +30,21 @@ Về cơ bản KaTeX là bản nhỏ gọn hơn của LaTeX.
 
 Đọc cách viết Toán ở [[KaTeX help|đây]]. <-- Nhấn vào cái link này
 
-## Tạo folder riêng trong Notes
+## 1.4. Tạo folder riêng trong Note
+ - Đây là việc của mọi người.
+ - Mình mong mọi người tạo mỗi file riêng cho một chủ đề khác nhau.
+## 1.5 Commit và push note của mọi người lên github:
+- NHỚ COMMIT VÀ PUSH LÊN . 
+# 2. Yêu cầu của mỗi note:
+- Bài toán
+- Ý nghĩa
+- Ứng dụng
+- Hướng tiếp cận giải quyết
+- Phương pháp đánh giá
+- Các vấn đề mở.
+# 3. Lưu ý đối với các notes có công thức toán.
+- Mình mong các bạn giải nghĩa đc các công thức toán và tạo link dẫn đến phần chứng minh trong folder proofs.
+- Mình cần các bạn đọc và hiểu chứ ko phải chép. Viết dai viết dài càng tốt, dễ hiểu là đc. 
 
-
+# 4. Phân chia công việc:
+Hãy vào [[Seminar khai phá luồng dữ liệu|đây]] để chọn công việc.
