@@ -11,24 +11,13 @@
             "id": "30c701290aaec77d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "Seminar khai phá luồng dữ liệu.md",
-                "mode": "source",
-                "source": false
+                "file": ".obsidian/workspace.json",
+                "staged": true
               },
-              "icon": "lucide-file",
-              "title": "Seminar khai phá luồng dữ liệu"
-            }
-          },
-          {
-            "id": "0587c3245870f0e9",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "git-pull-request",
+              "title": "Diff View (workspace.json)"
             }
           }
         ]
