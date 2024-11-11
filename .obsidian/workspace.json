@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "37a57f310ff1d144",
+        "id": "bf1cacd762070638",
         "type": "tabs",
         "children": [
           {
-            "id": "eed13b04c56550c6",
+            "id": "30c701290aaec77d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "5e7f00acb62ac904",
+            "id": "0587c3245870f0e9",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -149,10 +149,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Test from Trung.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of Test from Trung"
             }
           },
           {
@@ -183,19 +183,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ef6f77b747ed979f",
+  "active": "30c701290aaec77d",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Seminar khai phá luồng dữ liệu.md",
-    "Main note for the seminar..md",
-    "preamble.sty",
-    "books/Book2-DataMiningTheTextbook.pdf",
     "Notes/Sáng/Yêu cầu..md",
-    "Notes/Sáng",
-    "Notes",
     "README.md",
-    "KaTeX help.md",
+    "Main note for the seminar..md",
+    "books/Book2-DataMiningTheTextbook.pdf",
+    "preamble.sty~",
+    "Notes/Sáng/Book 2/Introduction.md",
+    "Notes/Sáng/Book 2",
+    "Notes/Sáng/Untitled.md",
     "books/Book3-MiningOfMassiveDatasets.pdf",
+    "Proofs",
+    "KaTeX help.md",
+    "Test from Sáng.md",
+    "Test from Trung.md",
+    "conflict-files-obsidian-git.md",
+    "Notes/Sáng",
+    "preamble.sty",
+    "Notes",
     "books",
     "Pasting.md",
     "image/Pasted image 20241108145346.png",
