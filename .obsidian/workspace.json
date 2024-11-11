@@ -8,46 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "30c701290aaec77d",
+            "id": "cf6135075dbaa94e",
             "type": "leaf",
             "state": {
-              "type": "diff-view",
-              "state": {
-                "file": ".obsidian/workspace.json",
-                "staged": true
-              },
-              "icon": "git-pull-request",
-              "title": "Diff View (workspace.json)"
-            }
-          },
-          {
-            "id": "a0a60b49b749cc13",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": ".obsidian/appearance.json",
-                "staged": true
-              },
-              "icon": "git-pull-request",
-              "title": "Diff View (appearance.json)"
-            }
-          },
-          {
-            "id": "0b43225e4e8b1fc4",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": ".obsidian/appearance.json",
-                "staged": true
-              },
-              "icon": "git-pull-request",
-              "title": "Diff View (appearance.json)"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -199,7 +169,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0b43225e4e8b1fc4",
+  "active": "cf6135075dbaa94e",
   "lastOpenFiles": [
     "conflict-files-obsidian-git.md",
     "Seminar khai phá luồng dữ liệu.md",
