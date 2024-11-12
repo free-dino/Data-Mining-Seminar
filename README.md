@@ -43,6 +43,7 @@ Về cơ bản KaTeX là bản nhỏ gọn hơn của LaTeX.
 	![Git window](image/Pasted%20image%2020241112172004.png)
 	- Lần lượt các nút từ trái quả phải là: Commit and sync, Commit, Stage all, Unstage all, push, pull, Change layout và Refresh.
 	- Cố gắng sau mỗi lần viết thì hãy Commit rồi push nhé. 
+	- Bạn cũng có thể đóng right taskbar bằng cái nút ở góc bên phải nhé.
 # 2. Yêu cầu của mỗi note:
 - Bài toán
 - Ý nghĩa
