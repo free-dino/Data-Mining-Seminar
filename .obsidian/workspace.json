@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "bf1cacd762070638",
+        "id": "f26b253d85e71298",
         "type": "tabs",
         "children": [
           {
-            "id": "cf6135075dbaa94e",
+            "id": "17d82cdc8a7705ab",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.7.5"
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.5"
+              "title": "README"
             }
           }
         ]
@@ -171,8 +173,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cf6135075dbaa94e",
+  "active": "17d82cdc8a7705ab",
   "lastOpenFiles": [
+    "image/Pasted image 20241112172004.png",
+    "image/Pasted image 20241112171830.png",
+    "image/Pasted image 20241112171312.png",
     "conflict-files-obsidian-git.md",
     "Seminar khai phá luồng dữ liệu.md",
     "Notes/Sáng/Yêu cầu..md",
