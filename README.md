@@ -39,6 +39,7 @@ Về cơ bản KaTeX là bản nhỏ gọn hơn của LaTeX.
 	- Cái task bar bên trái, có thể mở được bằng cách nhấn vào biểu tượng này ![left taskbar](image/Pasted%20image%2020241112171312.png) ở góc trái màn hình
 	- Nhìn từ hình đó xuống dưới sẽ thấy biểu tượng: ![Git](image/Pasted%20image%2020241112171830.png)
 	- Nhấn vào nó và cửa sổ bên phải sẽ hiện ra:
+	
 	![Git window](image/Pasted%20image%2020241112172004.png)
 	- Lần lượt các nút từ trái quả phải là: Commit and sync, Commit, Stage all, Unstage all, push, pull, Change layout và Refresh.
 	- Cố gắng sau mỗi lần viết thì hãy Commit rồi push nhé. 
