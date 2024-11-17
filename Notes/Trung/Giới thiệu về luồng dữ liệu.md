@@ -1,3 +1,4 @@
+# 1. Tổng quan
 Định nghĩa và tính chất
 - Many transactions of everyday life, such as using a credit card or a phone, lead to automated data collection.
 - An important assumption in these forms of data collection is that the data continuously accumulate over time at a rapid rate.
