@@ -9,8 +9,8 @@ Cung cấp các kiến thức về:
 
 # Phần 1: Giới thiệu về luồng dữ liệu (Quyển 2-3)
 - ## 1.1. Tổng quan
+	* Ví dụ thực tế về luồng dữ liệu
 	- Định nghĩa và tính chất của luồng dữ liệu
-	- Ví dụ thực tế về luồng dữ liệu
 	- Giới thiệu về hệ thống quản lý luồng dữ liệu (DSMS)
 - ## 1.2 Các thách thức chính trong xử lý luồng dữ liệu
 	- Yêu cầu phân tích thời gian thực

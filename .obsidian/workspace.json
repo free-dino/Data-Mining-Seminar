@@ -20,15 +20,9 @@
               "icon": "lucide-file",
               "title": "Main note for the seminar."
             }
-          }
-        ]
-      },
-      {
-        "id": "dbaa10b0b4ff050d",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "ab4f657007231e76",
+            "id": "f7a91db3fc92a92a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -44,24 +38,37 @@
         ]
       },
       {
-        "id": "68010c551b2e23a1",
+        "id": "31a0d3b4746e1f82",
         "type": "tabs",
         "children": [
           {
-            "id": "b01ea60317db7894",
+            "id": "cad265036c8e4df0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
+                "file": "Seminar khai phá luồng dữ liệu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Giới thiệu về luồng dữ liệu"
+              "title": "Seminar khai phá luồng dữ liệu"
+            }
+          },
+          {
+            "id": "253b698e03f4cb15",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "books/Book2-DataMiningTheTextbook.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Book2-DataMiningTheTextbook"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -216,22 +223,23 @@
   },
   "active": "17d82cdc8a7705ab",
   "lastOpenFiles": [
-    "Seminar khai phá luồng dữ liệu.md",
-    "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
+    "books/Book2-DataMiningTheTextbook.pdf",
     "Main note for the seminar..md",
+    "Seminar khai phá luồng dữ liệu.md",
+    "books/Book3-MiningOfMassiveDatasets.pdf",
+    "Notes/Sáng/Yêu cầu..md",
+    "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
+    "Pasted image 20241118013304.png",
     "README.md",
     "Notes/Trung",
     "image/Pasted image 20241112172004.png",
     "image/Pasted image 20241112171830.png",
     "image/Pasted image 20241112171312.png",
     "conflict-files-obsidian-git.md",
-    "Notes/Sáng/Yêu cầu..md",
-    "books/Book2-DataMiningTheTextbook.pdf",
     "preamble.sty~",
     "Notes/Sáng/Book 2/Introduction.md",
     "Notes/Sáng/Book 2",
     "Notes/Sáng/Untitled.md",
-    "books/Book3-MiningOfMassiveDatasets.pdf",
     "Proofs",
     "KaTeX help.md",
     "Test from Sáng.md",
