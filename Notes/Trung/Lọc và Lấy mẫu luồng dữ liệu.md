@@ -1,10 +1,19 @@
 ## I. Lọc:
-### 1. 
+### 1. Tại sao lại cần lọc luồng dữ liệu:
+- Chúng ta muốn lấy những bộ trong luồng mà đạt một tiêu chuẩn nào đó.
+### 2. Pros and Cons:
+Pros:
+- Cải thiện chất lượng của dữ liệu và cho phép tập trung vào dữ liệu đáng chú ý.
+- Khái quát hoá dữ liệu tốt hơn và giúp trích xuất các tín hiệu liên quan.
+- Hỗ trợ việc thích ứng với sự thay đổi của luồng dữ liệu.
+Cons:
+- Có thể lọc đi dữ liệu quan trọng hoặc giới thiệu sự thiên vị trong dữ liệu.
+- Việc lựa chọn tiêu chuẩn lọc vô cùng phức tạp và yêu cầu tinh chỉnh chi tiết, đặc biệt là khi luồng dữ liệu thay đổi liên tục.
+- Việc lọc quá mức có thể làm mất cơ hội tìm ra các khuôn mẫu hiếm.
 ## II. Lấy mẫu luồng dữ liệu
 ### 1. Tại sao lại cần lấy mẫu luồng dữ liệu:
 - Lấy mẫu là một trong số những phương pháp linh động nhất để tóm tắt luồng dữ liệu.
 - Sau khi đã lấy mẫu từ dữ liệu, hầu như mọi thuật toán offline có thể được áp dụng lên mẫu.
-- 
 ### 2. Ví dụ:
 Một công cụ tìm kiếm nhận vào một luồng truy vấn, và nó muốn tìm hiểu hành vi của người dùng:
 - Luồng tìm kiếm bao gồm các bộ (user, query, time) 
@@ -18,8 +27,10 @@ Phương pháp này hiệu quả miễn là chúng ta có thể lưu trữ danh 
 
 ### 3. Pros and cons:
 Pros:
-- Lợi thế chính của việc lấy mẫu là nó có thể sử dụng cho một ứng dụng bất kỳ.
-- Đánh giá gần đúng một luồng dữ liệu dựa trên một tập nhỏ từ luồng dữ liệu đó.
+- Giảm bớt bộ nhớ sử dụng, yêu cầu lưu trữ, chi phí tính toán
+- Cho phép xử lí thời gian thực và cập nhật mô hình lấy mẫu liên tục
+- Đánh giá gần đúng một luồng dữ liệu dựa trên một tập nhỏ từ luồng dữ liệu đó, tránh việc overfit
 Cons:
-- Mẫu cần được cập nhật thường xuyên để hướng tới dữ liệu mới và tránh việc kích thước mẫu trở nên quá lớn.
-- Việc sử dụng mẫu dẫn đến việc thiếu thông tin về quá khứ của luồng dữ liệu vào một thời điểm bất kỳ.
+- Mất mát thông tin và thiếu hiểu biết về quá khứ của luồng vào bất cứ thời điểm nào.
+- Độ chính xác giảm và có thể không biểu hiện rõ các sự kiện hiếm.
+- Bảo đảm mẫu thể hiện được trạng thái của luồng khá khó khăn với việc luồng dữ liệu thay đổi liên tục theo thời gian.
