@@ -4,43 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "f26b253d85e71298",
+        "id": "e239990a4495a7d5",
         "type": "tabs",
+        "dimension": 44.57662701189643,
         "children": [
           {
-            "id": "17d82cdc8a7705ab",
+            "id": "c31e3ad8d03656b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Main note for the seminar..md",
+                "file": "Seminar khai phá luồng dữ liệu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Main note for the seminar."
+              "title": "Seminar khai phá luồng dữ liệu"
             }
           }
         ]
       },
       {
-        "id": "31a0d3b4746e1f82",
+        "id": "b092c52cad90291c",
         "type": "tabs",
+        "dimension": 55.42337298810357,
         "children": [
           {
-            "id": "cad265036c8e4df0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "books/Book3-MiningOfMassiveDatasets.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Book3-MiningOfMassiveDatasets"
-            }
-          },
-          {
-            "id": "253b698e03f4cb15",
+            "id": "72d57002b3762059",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -52,17 +42,29 @@
             }
           },
           {
-            "id": "f7a91db3fc92a92a",
+            "id": "3863c35b22a6f62a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "diff-view",
               "state": {
-                "file": "Seminar khai phá luồng dữ liệu.md",
-                "mode": "source",
-                "source": false
+                "file": "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
+                "staged": true
               },
-              "icon": "lucide-file",
-              "title": "Seminar khai phá luồng dữ liệu"
+              "icon": "git-pull-request",
+              "title": "Diff View (Giới thiệu về luồng dữ liệu)"
+            }
+          },
+          {
+            "id": "18416819ca4e287f",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "Notes/Trung/Lọc và Lấy mẫu luồng dữ liệu.md",
+                "staged": true
+              },
+              "icon": "git-pull-request",
+              "title": "Diff View (Lọc và Lấy mẫu luồng dữ liệu)"
             }
           }
         ],
@@ -122,8 +124,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 233.5
   },
   "right": {
     "id": "56bba8ecdb245ebf",
@@ -206,7 +207,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 318.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -219,27 +220,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "17d82cdc8a7705ab",
+  "active": "18416819ca4e287f",
   "lastOpenFiles": [
-    "Seminar khai phá luồng dữ liệu.md",
-    "Main note for the seminar..md",
     "books/Book3-MiningOfMassiveDatasets.pdf",
+    "Notes/Trung/Lọc và Lấy mẫu luồng dữ liệu.md",
     "books/Book2-DataMiningTheTextbook.pdf",
-    "Notes/Sáng/Yêu cầu..md",
+    "Seminar khai phá luồng dữ liệu.md",
     "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
+    "Main note for the seminar..md",
     "Pasted image 20241118013304.png",
-    "README.md",
+    "Notes/Trung/Trích xuất.md",
+    "Notes/Sáng/Yêu cầu..md",
+    "KaTeX help.md",
     "Notes/Trung",
+    "Notes/Untitled.md",
+    "README.md",
     "image/Pasted image 20241112172004.png",
     "image/Pasted image 20241112171830.png",
     "image/Pasted image 20241112171312.png",
+    "image/Pasted image 20241108143813.png",
+    "image/Pasted image 20241108145346.png",
+    "New Text Document.txt",
     "conflict-files-obsidian-git.md",
-    "preamble.sty~",
-    "Notes/Sáng/Book 2/Introduction.md",
-    "Notes/Sáng/Book 2",
-    "Notes/Sáng/Untitled.md",
-    "Proofs",
-    "KaTeX help.md",
     "Test from Sáng.md",
     "Test from Trung.md",
     "Notes/Sáng",
@@ -247,7 +249,6 @@
     "Notes",
     "books",
     "Pasting.md",
-    "image/Pasted image 20241108145346.png",
-    "image/Pasted image 20241108143813.png"
+    "image"
   ]
 }
