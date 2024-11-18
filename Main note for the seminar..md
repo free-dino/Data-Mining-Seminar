@@ -15,19 +15,18 @@ Cung cấp kiến thức về:
 - Lượng dữ liệu này sẽ tích lũy liên tục qua một thời gian ngắn.
 - Nếu ko thu thập hoặc xử lý ngay sẽ mất đi.
 - Vì lượng dữ liệu tích lũy rất nhanh nên sẽ ko thể nào thu thập theo kiểu truyền thống
-- -> Luồng dữ liệu.
 - ### 1.1.1 Ví dụ thực tế về luồng dữ liệu:
-	- Dữ liệu từ cảm cảm biến.
-	- Dữ liệu ảnh, video.
-	- Internet và Web Traffic
+	- Giao dịch
+	- Web click
+	- Mạng xã hội
+	- Mạng truyền thông
 - ### 1.1.2 Định nghĩa:
-	 - Luồng dữ liệu là dữ liệu liên tục đc sinh ra bởi nhiều nguồn khác nhau
+	 - Luồng dữ liệu là các dòng dữ liệu ko giới hạn, liên tục được sinh ra bởi nhiều nguồn. **Không có điểm đầu và điểm cuối**.
 - ### 1.1.3 Một vài tính chất của luồng dữ liệu
 	- Liên tục và ko giới hạn.
-	- Khối lượng lớn
-	- Nhạy cảm với thời gian
-	- Động
-	- Ko đầy đủ.
+	- Thời gian thực
+	- Khối lượng lớn và vận tốc lớn
+	- Bất biến
 - ### 1.1.4 Giới thiệu về hệ thống quản lý luồng dữ liệu (DSMS):
 	![[Pasted image 20241118013304.png]]
 	 "Chúng ta có thể hình dung một bộ xử lý dữ liệu luồng như là một hệ thống quản lý dữ liệu.
@@ -47,5 +46,17 @@ Cung cấp kiến thức về:
 # Phần 2: Các cấu trúc dữ liệu tóm gọn cho luồng dữ liệu
 Có hai loại cấu trúc dữ liệu tóm gọn:
 - Cấu trúc chung: đc dùng cho mọi trường hợp một cách trực tiếp.
-  "Phương pháp tóm gọn duy nhất theo kiểu này là Lấy mẫu, trong trường hợp này là lấy mẫu dự trữ"
-- 
+- Các cấu trúc cụ thể: Dùng cho các trường hợp cụ thể như là đếm tần suất, đếm số lượng
+## 2.1 Lấy mẫu dự trữ (Reservoir Sampling)
+
+## 2.2 Các cấu trúc tóm gọn cho các miền lớn
+## 2.2.1 Tổng quan
+## 2.2.2 Các cấu trúc dữ liệu
+### 2.2.2.1 Bộ lọc Bloom
+### 2.2.2.2 Count-min sketch
+### 2.2.2.3 Ước lượng các mô-men và Thuật toán AMS
+### 2.2.2.4 Đếm các phần tử duy nhất và thuật toán Flajolet-Martin
+"\[flaʒɔlɛ\]" 
+#### 2.2.2.5 Đếm số lượng 1 trong 1 cửa sổ và thuật toán DGIM
+### 2.2.2.6 Của sổ suy giảm
+## 2.3 So sánh
