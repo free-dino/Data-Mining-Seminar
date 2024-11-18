@@ -45,14 +45,12 @@
             "id": "cad265036c8e4df0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Seminar khai phá luồng dữ liệu.md",
-                "mode": "source",
-                "source": false
+                "file": "books/Book3-MiningOfMassiveDatasets.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Seminar khai phá luồng dữ liệu"
+              "icon": "lucide-file-text",
+              "title": "Book3-MiningOfMassiveDatasets"
             }
           },
           {
@@ -67,8 +65,7 @@
               "title": "Book2-DataMiningTheTextbook"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -221,12 +218,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "253b698e03f4cb15",
+  "active": "17d82cdc8a7705ab",
   "lastOpenFiles": [
+    "books/Book3-MiningOfMassiveDatasets.pdf",
     "Main note for the seminar..md",
     "Seminar khai phá luồng dữ liệu.md",
     "books/Book2-DataMiningTheTextbook.pdf",
-    "books/Book3-MiningOfMassiveDatasets.pdf",
     "Notes/Sáng/Yêu cầu..md",
     "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
     "Pasted image 20241118013304.png",
