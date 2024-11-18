@@ -44,47 +44,8 @@ Cung cấp kiến thức về:
 - Giới hạn bộ nhớ và tính toán
 
 "Chúng ta khó có phần cứng có thể đáp ứng việc thu thập và phân tích luồng dữ liệu. Vì vậy chúng ta sẽ nhìn vào việc lấy mẫu dữ liệu, vì thường sẽ hiệu quả hơn khi ước tính kết quả hơn là tìm kết quả chính xác,"
-# Phần 2: Lấy mẫu dữ liệu:
-"Như mình đã nói, thì đặc điểm của luồng dữ liệu là nó có một khối lượng rất lớn, chúng ta ko thể thu toàn bộ một luồng để trích xuất thông tin đc, chúng ta cần 1 một giải pháp tốt hơn, đó là lấy mẫu."
-
-"Câu hỏi là làm sao để lấy được một mẫu có tính đại diện cho cả luồng?"
-## 2.1: Ví dụ.
-### Bài toán: 
-Giả sử chúng ta có một search engine, ví dụ như là Google, nhận một luồng dữ liệu rất lớn là các truy vấn vấn có dạng : <User, Query, Time>
-Trong đó: 
-- User: Tên người dùng
-- Query: Từ mà người đó search
-- Time: Thời gian họ nhập truy vấn đó.
-Bạn muốn biết: Tỷ lệ lặp lại của các tìm kiếm từ mọi người dùng trong tháng qua là bao nhiêu?
-
-### Mô hình lấy mẫu:
-Quyết định: Giữ lại 1/10 bộ dữ liệu một cách ngẫu nhiên.
-Cách làm: 
-- Gen 1 số bất kì từ 0-9
-- Nếu số sinh ra = 0 -> giữ lại, còn lại thì bỏ.
--> Giữ lại 10%.
-
-### Vấn đề nảy sinh: 
-* Nếu chúng ta gọi :
-	* $\mathbf s$: là số lượng tìm kiếm chỉ tìm kiếm 1 lần
-	* $\mathbf d$: là số lượng tìm kiếm mà đc tìm kiếm 2 lần (lặp lại 1 lần).
-
-	$\mathbf s / 10$ -> số truy vấn 1 lần đc lưu trữ lưu trữ 1 bản
-	$\mathbf d /100$ -> số truy vấn 2 lần đc lưu trữ cả 2 bản
-	$18 \mathbf d/ 100$ -> số truy vấn 2 lần chỉ đc lưu trữ 1 bản
-
-"Vì bài nói rất dài, bọn mình sẽ để link github đến tài liệu và các chứng minh toán học có trong này, còn hiện tại các bạn hãy coi như những biểu thức chúng mình đưa lên đây là đáng tin cậy."
-
-Đáp án đúng sẽ là :
-$$
-\frac {\mat d}{\mat s+ \mat d}
-$$
-Kết quả của phương pháp lấy mẫu là:
-$$
-\frac {\mat d / 100}{\mat s/10 + \mat d/100 + 18 \mat d/100} = \frac {\mat d}{10 \mat s + 19 \mat d}
-$$
-
-=> Ko có số dương nào cho $\mat s$ và $\mat d$ thỏa mãn: 
-$$
-\frac {\mat d}{\mat s + \mat d} = \frac {\mat d}{10\mat s + 19 \mat d}
-$$
+# Phần 2: Các cấu trúc dữ liệu tóm gọn cho luồng dữ liệu
+Có hai loại cấu trúc dữ liệu tóm gọn:
+- Cấu trúc chung: đc dùng cho mọi trường hợp một cách trực tiếp.
+  "Phương pháp tóm gọn duy nhất theo kiểu này là Lấy mẫu, trong trường hợp này là lấy mẫu dự trữ"
+- 
