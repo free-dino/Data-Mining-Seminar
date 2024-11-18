@@ -123,8 +123,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "56bba8ecdb245ebf",
@@ -220,7 +219,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f7a91db3fc92a92a",
+  "active": "ef6f77b747ed979f",
   "lastOpenFiles": [
     "Main note for the seminar..md",
     "books/Book2-DataMiningTheTextbook.pdf",
