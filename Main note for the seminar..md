@@ -79,13 +79,20 @@ $$
 - Hàm exponential bias là một hàm ko bộ nhớ
 "Nghĩa là xác suất đưa 1 điểm bất kì vào trong mẫu ko phụ thuộc vào quá khứ hay thời gian đến".
 
-**Với trường hợp $k < 1 / \ld$**
+**Chúng ta chỉ xét trường hợp $k < 1 / \ld$**:
 "Vấn đề sẽ trở nên đáng quan tâm nếu ở trong tình trạng không gian bộ nhớ bị giới hạn, khi mà kích cỡ bộ nhớ dự trữ $k$ nhỏ hơn $1/\ld$"
 Mẫu của exponential bias từ một luồng với độ dài vô hạn, độ dài của nó sẽ ko vượt quá $1/\ld$ 
 
 Thuật toán:
 Bắt đầu: một bộ nhớ dự trữ trống.
-Chúng ta sẽ dùng policy này để lấp đầy bộ nhớ dự trữ:
+Chúng ta sẽ dùng chính sách (policy) này để lấp đầy bộ nhớ dự trữ:
+- 1. Khi điểm thứ $n+1$ xuất hiện:
+	- Chèn điểm đó vào bộ nhớ dự trữ với xác suất $\ld \cdot k$ 
+	- Tung một đồng xu với xác xuất thành công: $F(n) \in [0,1]$ ~ tỉ lệ bộ nhớ đã bị lấp đầy.
+		- Nếu thành công: Chọn ngẫu nhiên một điểm trong bộ nhớ và thay thế với điểm mới
+		- Nếu thất bại: Thêm điểm mới vào bộ nhớ và ko cần xóa
+* 2. 1. Bộ nhớ đc lấp đầy nhanh lúc ban đầu và chậm lại khi gần đạt dung lượng tối đa.
+### 2.1.2 Các giới hạn lấy mẫu có ích
 
 ## 2.2 Các cấu trúc tóm gọn cho các miền lớn
 ## 2.2.1 Tổng quan
