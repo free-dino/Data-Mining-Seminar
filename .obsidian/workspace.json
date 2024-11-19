@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "2024-11-18"
             }
+          },
+          {
+            "id": "f7971215065c9f51",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.7"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.7"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "31a0d3b4746e1f82",
@@ -219,7 +232,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "17d82cdc8a7705ab",
+  "active": "f7971215065c9f51",
   "lastOpenFiles": [
     "chứng minh xác suất.md",
     "2024-11-18.md",
