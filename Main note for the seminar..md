@@ -48,6 +48,24 @@ Có hai loại cấu trúc dữ liệu tóm gọn:
 - Cấu trúc chung: đc dùng cho mọi trường hợp một cách trực tiếp.
 - Các cấu trúc cụ thể: Dùng cho các trường hợp cụ thể như là đếm tần suất, đếm số lượng
 ## 2.1 Lấy mẫu dự trữ (Reservoir Sampling)
+"Lấy mẫu là một trong những phương pháp linh hoạt nhất cho tóm tắt luồng, và đặc biệt là chúng có thể đc dùng cho nhiều trường hợp khác nhau"
+
+"Trong lấy mẫu dự trữ, một mẫu gồm $k$ điểm sẽ đc duy trì một cách dynamically từ luồng dữ liệu."
+"-> Phương pháp lấy mẫu sẽ hoạt động với "kiến thức ko đầy đủ" về lịch sử của luồng tại bất kì thời điêm nào. Nói cách khác, chúng ta phải đưa ra 2 quyết định: 1: Luật lấy mẫu, 2: Luật xóa khỏi mẫu"
+
+**Phương pháp**:
+Với một một mẫu dự trữ size $k$, $k$ điểm dữ liệu đầu tiên của luồng sẽ đc dùng để khởi tạo quá trình dự trữ, 2 điều sau đây sẽ đc áp dụng:
+- Chèn điểm dữ liệu thứ $n$ vào mẫu dự trữ với xác suất $k/n$ 
+- Nếu được chèn vào thì ngẫu nhiên loại bỏ một trong $k$ điểm trong mẫu dự trữ, nhường chỗ cho điểm mới.
+**Bổ đề**: 
+Sau khi $n$ điểm của luồng dữ liệu đến bộ xử lý, xác suất mà bất kì điểm dữ liệu nào được cho vào mẫu dự trữ là như nhau và bằng $k/n$.
+
+### 2.1.1 Xử lý trôi dạt khái niệm:
+"Trong xử lý luồng dữ liệu, thì dữ liệu mới thường quan trọng hơn dữ liệu cũ vì dữ liệu có sự thay đổi qua thời gian vì chúng có giá trị phân tích cao hơn. Vì vậy bài toán đặt ra là: Làm sao để xác suất đưa các dữ liệu gần đây vào mẫu cao hơn, chúng ta có thể đạt được điều này bằng một hàm bias"
+
+**Bias function**: 
+Cho $f(r,n)$ là một hàm bias cho điểm dữ liệu thứ $r$ tại thời điểm đến của điểm dữ liệu thứ $n$. 
+Một mẫu biased $\mathcal S(n)$ tại thời điểm đến của điểm dữ liệu thứ $n$ trong luồng được định nghĩa là một mẫu sao cho xác suất liên quan $p(r,n)$ của  
 
 ## 2.2 Các cấu trúc tóm gọn cho các miền lớn
 ## 2.2.1 Tổng quan
