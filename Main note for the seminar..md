@@ -20,6 +20,8 @@ Cung cấp kiến thức về:
 	- Web click
 	- Mạng xã hội
 	- Mạng truyền thông
+
+	- Một số nguồn luồng dữ liệu: .....
 - ### 1.1.2 Định nghĩa:
 	 - Luồng dữ liệu là các dòng dữ liệu ko giới hạn, liên tục được sinh ra bởi nhiều nguồn. **Không có điểm đầu và điểm cuối**.
 - ### 1.1.3 Một vài tính chất của luồng dữ liệu
@@ -57,15 +59,33 @@ Có hai loại cấu trúc dữ liệu tóm gọn:
 Với một một mẫu dự trữ size $k$, $k$ điểm dữ liệu đầu tiên của luồng sẽ đc dùng để khởi tạo quá trình dự trữ, 2 điều sau đây sẽ đc áp dụng:
 - Chèn điểm dữ liệu thứ $n$ vào mẫu dự trữ với xác suất $k/n$ 
 - Nếu được chèn vào thì ngẫu nhiên loại bỏ một trong $k$ điểm trong mẫu dự trữ, nhường chỗ cho điểm mới.
+
+![[Pasted image 20241119201827.png]]
 **Bổ đề**: 
 Sau khi $n$ điểm của luồng dữ liệu đến bộ xử lý, xác suất mà bất kì điểm dữ liệu nào được cho vào mẫu dự trữ là như nhau và bằng $k/n$.
 
-### 2.1.1 Xử lý trôi dạt khái niệm:
+### 2.1.1 Xử lý chuyển dịch khái niệm:
 "Trong xử lý luồng dữ liệu, thì dữ liệu mới thường quan trọng hơn dữ liệu cũ vì dữ liệu có sự thay đổi qua thời gian vì chúng có giá trị phân tích cao hơn. Vì vậy bài toán đặt ra là: Làm sao để xác suất đưa các dữ liệu gần đây vào mẫu cao hơn, chúng ta có thể đạt được điều này bằng một hàm bias"
 
 **Bias function**: 
-Cho $f(r,n)$ là một hàm bias cho điểm dữ liệu thứ $r$ tại thời điểm đến của điểm dữ liệu thứ $n$. 
-Một mẫu biased $\mathcal S(n)$ tại thời điểm đến của điểm dữ liệu thứ $n$ trong luồng được định nghĩa là một mẫu sao cho xác suất liên quan $p(r,n)$ của  
+Với $f(r,n)$ là một hàm bias cho điểm dữ liệu thứ $r$ tại thời điểm đến của điểm dữ liệu thứ $n$, một mẫu biased $\mathcal S(n)$ tại thời điểm đến của điểm dữ liệu thứ $n$ trong luồng được định nghĩa là một mẫu sao cho xác suất tương đối $p(r,n)$ của điểm thứ $r$ thuộc mẫu $S(n)$ (có cỡ n) tỉ lệ thuận với $f(r, n)$
+
+"Thông thường thì đây là một vấn đề mở để thực hiện lấy mẫu dự trữ với một hàm bias bất kì, tuy nhiên phương pháp thường đc dùng là hàm exponential bias"
+Hàm exponential bias: 
+$$
+f(r,n) = e^{\ld(n-r)}
+$$
+- $\ld$ là tỉ lệ bias và thường nằm trong khoảng $[0,1]$, $\ld=0$ nghĩa là unbiased và ngược lại
+- Hàm exponential bias là một hàm ko bộ nhớ
+"Nghĩa là xác suất đưa 1 điểm bất kì vào trong mẫu ko phụ thuộc vào quá khứ hay thời gian đến".
+
+**Với trường hợp $k < 1 / \ld$**
+"Vấn đề sẽ trở nên đáng quan tâm nếu ở trong tình trạng không gian bộ nhớ bị giới hạn, khi mà kích cỡ bộ nhớ dự trữ $k$ nhỏ hơn $1/\ld$"
+Mẫu của exponential bias từ một luồng với độ dài vô hạn, độ dài của nó sẽ ko vượt quá $1/\ld$ 
+
+Thuật toán:
+Bắt đầu: một bộ nhớ dự trữ trống.
+Chúng ta sẽ dùng policy này để lấp đầy bộ nhớ dự trữ:
 
 ## 2.2 Các cấu trúc tóm gọn cho các miền lớn
 ## 2.2.1 Tổng quan

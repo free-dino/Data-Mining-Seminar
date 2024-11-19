@@ -22,13 +22,17 @@
             }
           },
           {
-            "id": "501803c75a206c6a",
+            "id": "b96929608d69e108",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Seminar khai phá luồng dữ liệu.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Seminar khai phá luồng dữ liệu"
             }
           }
         ]
@@ -61,6 +65,18 @@
               },
               "icon": "lucide-file-text",
               "title": "Book2-DataMiningTheTextbook"
+            }
+          },
+          {
+            "id": "d651ff889ea50eb0",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "books/Book3-MiningOfMassiveDatasets.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Book3-MiningOfMassiveDatasets"
             }
           }
         ],
@@ -217,11 +233,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f7a91db3fc92a92a",
+  "active": "02311c5af1941dea",
   "lastOpenFiles": [
-    "books/Book2-DataMiningTheTextbook.pdf",
     "Main note for the seminar..md",
+    "books/Book2-DataMiningTheTextbook.pdf",
     "Notes/NOTE 4+3 Tuấn Anh.md",
+    "Seminar khai phá luồng dữ liệu.md",
+    "Pasted image 20241119201827.png",
+    "books/Book3-MiningOfMassiveDatasets.pdf",
     "2024-11-18.md",
     "chứng minh xác suất.md",
     "Bloom filter.md",
@@ -231,9 +250,7 @@
     "Notes/Chính/Frequent Pattern Mining in Data Streams.md",
     "Notes/Chính/CluStream Algorithm.md",
     "Notes/Chính/Synopsis Structures.md",
-    "Seminar khai phá luồng dữ liệu.md",
     "Notes/Trung/Lọc và Lấy mẫu luồng dữ liệu.md",
-    "books/Book3-MiningOfMassiveDatasets.pdf",
     "Notes/Chính",
     "Notes/Sáng/Yêu cầu..md",
     "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
