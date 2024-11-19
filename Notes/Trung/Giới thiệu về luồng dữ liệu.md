@@ -14,7 +14,7 @@ Giới thiệu về hệ thống quản lý luồng dữ liệu
 	- Any number of streams can enter the system. Each stream can provide elements at its own schedule, they need not have the same data rates or data types, and the time between elements of one stream need not be uniform.
 	- Streams may be archived in a large archival store, but we assume it is not possible to answer queries from the archival store.
 	- There is also a working store, into which summaries or parts of streams may be placed, and which can be used for answering queries. It is of sufficiently limited capacity that it cannot store all the data from all the streams.
-Thách thức chính
+# 2. Thách thức chính
 Yêu cầu phân tích thời gian thực
 - Data streaming algorithms typically need to operate under the following constraints, at least a few of which are always present, whereas others are occasionally present:
 	- One-pass constraint: Because volumes of data are generated continuously and rapidly, it is assumed that the data can be processed only once.

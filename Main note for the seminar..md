@@ -15,19 +15,20 @@ Cung cấp kiến thức về:
 - Lượng dữ liệu này sẽ tích lũy liên tục qua một thời gian ngắn.
 - Nếu ko thu thập hoặc xử lý ngay sẽ mất đi.
 - Vì lượng dữ liệu tích lũy rất nhanh nên sẽ ko thể nào thu thập theo kiểu truyền thống
-- -> Luồng dữ liệu.
 - ### 1.1.1 Ví dụ thực tế về luồng dữ liệu:
-	- Dữ liệu từ cảm cảm biến.
-	- Dữ liệu ảnh, video.
-	- Internet và Web Traffic
+	- Giao dịch
+	- Web click
+	- Mạng xã hội
+	- Mạng truyền thông
+
+	- Một số nguồn luồng dữ liệu: .....
 - ### 1.1.2 Định nghĩa:
-	 - Luồng dữ liệu là dữ liệu liên tục đc sinh ra bởi nhiều nguồn khác nhau
+	 - Luồng dữ liệu là các dòng dữ liệu ko giới hạn, liên tục được sinh ra bởi nhiều nguồn. **Không có điểm đầu và điểm cuối**.
 - ### 1.1.3 Một vài tính chất của luồng dữ liệu
 	- Liên tục và ko giới hạn.
-	- Khối lượng lớn
-	- Nhạy cảm với thời gian
-	- Động
-	- Ko đầy đủ.
+	- Thời gian thực
+	- Khối lượng lớn và vận tốc lớn
+	- Bất biến
 - ### 1.1.4 Giới thiệu về hệ thống quản lý luồng dữ liệu (DSMS):
 	![[Pasted image 20241118013304.png]]
 	 "Chúng ta có thể hình dung một bộ xử lý dữ liệu luồng như là một hệ thống quản lý dữ liệu.
@@ -44,47 +45,80 @@ Cung cấp kiến thức về:
 - Giới hạn bộ nhớ và tính toán
 
 "Chúng ta khó có phần cứng có thể đáp ứng việc thu thập và phân tích luồng dữ liệu. Vì vậy chúng ta sẽ nhìn vào việc lấy mẫu dữ liệu, vì thường sẽ hiệu quả hơn khi ước tính kết quả hơn là tìm kết quả chính xác,"
-# Phần 2: Lấy mẫu dữ liệu:
-"Như mình đã nói, thì đặc điểm của luồng dữ liệu là nó có một khối lượng rất lớn, chúng ta ko thể thu toàn bộ một luồng để trích xuất thông tin đc, chúng ta cần 1 một giải pháp tốt hơn, đó là lấy mẫu."
+# Phần 2: Các cấu trúc dữ liệu tóm gọn cho luồng dữ liệu
+Có hai loại cấu trúc dữ liệu tóm gọn:
+- Cấu trúc chung: đc dùng cho mọi trường hợp một cách trực tiếp.
+- Các cấu trúc cụ thể: Dùng cho các trường hợp cụ thể như là đếm tần suất, đếm số lượng
+## 2.1 Lấy mẫu dự trữ (Reservoir Sampling)
+"Lấy mẫu là một trong những phương pháp linh hoạt nhất cho tóm tắt luồng, và đặc biệt là chúng có thể đc dùng cho nhiều trường hợp khác nhau"
 
-"Câu hỏi là làm sao để lấy được một mẫu có tính đại diện cho cả luồng?"
-## 2.1: Ví dụ.
-### Bài toán: 
-Giả sử chúng ta có một search engine, ví dụ như là Google, nhận một luồng dữ liệu rất lớn là các truy vấn vấn có dạng : <User, Query, Time>
-Trong đó: 
-- User: Tên người dùng
-- Query: Từ mà người đó search
-- Time: Thời gian họ nhập truy vấn đó.
-Bạn muốn biết: Tỷ lệ lặp lại của các tìm kiếm từ mọi người dùng trong tháng qua là bao nhiêu?
+"Trong lấy mẫu dự trữ, một mẫu gồm $k$ điểm sẽ đc duy trì một cách dynamically từ luồng dữ liệu."
+"-> Phương pháp lấy mẫu sẽ hoạt động với "kiến thức ko đầy đủ" về lịch sử của luồng tại bất kì thời điêm nào. Nói cách khác, chúng ta phải đưa ra 2 quyết định: 1: Luật lấy mẫu, 2: Luật xóa khỏi mẫu"
 
-### Mô hình lấy mẫu:
-Quyết định: Giữ lại 1/10 bộ dữ liệu một cách ngẫu nhiên.
-Cách làm: 
-- Gen 1 số bất kì từ 0-9
-- Nếu số sinh ra = 0 -> giữ lại, còn lại thì bỏ.
--> Giữ lại 10%.
+**Phương pháp**:
+Với một một mẫu dự trữ size $k$, $k$ điểm dữ liệu đầu tiên của luồng sẽ đc dùng để khởi tạo quá trình dự trữ, 2 điều sau đây sẽ đc áp dụng:
+- Chèn điểm dữ liệu thứ $n$ vào mẫu dự trữ với xác suất $k/n$ 
+- Nếu được chèn vào thì ngẫu nhiên loại bỏ một trong $k$ điểm trong mẫu dự trữ, nhường chỗ cho điểm mới.
 
-### Vấn đề nảy sinh: 
-* Nếu chúng ta gọi :
-	* $\mathbf s$: là số lượng tìm kiếm chỉ tìm kiếm 1 lần
-	* $\mathbf d$: là số lượng tìm kiếm mà đc tìm kiếm 2 lần (lặp lại 1 lần).
+![[Pasted image 20241119201827.png]]
+**Bổ đề**: 
+Sau khi $n$ điểm của luồng dữ liệu đến bộ xử lý, xác suất mà bất kì điểm dữ liệu nào được cho vào mẫu dự trữ là như nhau và bằng $k/n$.
 
-	$\mathbf s / 10$ -> số truy vấn 1 lần đc lưu trữ lưu trữ 1 bản
-	$\mathbf d /100$ -> số truy vấn 2 lần đc lưu trữ cả 2 bản
-	$18 \mathbf d/ 100$ -> số truy vấn 2 lần chỉ đc lưu trữ 1 bản
+### 2.1.1 Xử lý chuyển dịch khái niệm:
+"Trong xử lý luồng dữ liệu, thì dữ liệu mới thường quan trọng hơn dữ liệu cũ vì dữ liệu có sự thay đổi qua thời gian vì chúng có giá trị phân tích cao hơn. Vì vậy bài toán đặt ra là: Làm sao để xác suất đưa các dữ liệu gần đây vào mẫu cao hơn, chúng ta có thể đạt được điều này bằng một hàm bias"
 
-"Vì bài nói rất dài, bọn mình sẽ để link github đến tài liệu và các chứng minh toán học có trong này, còn hiện tại các bạn hãy coi như những biểu thức chúng mình đưa lên đây là đáng tin cậy."
+**Bias function**: 
+Với $f(r,n)$ là một hàm bias cho điểm dữ liệu thứ $r$ tại thời điểm đến của điểm dữ liệu thứ $n$, một mẫu biased $\mathcal S(n)$ tại thời điểm đến của điểm dữ liệu thứ $n$ trong luồng được định nghĩa là một mẫu sao cho xác suất tương đối $p(r,n)$ của điểm thứ $r$ thuộc mẫu $S(n)$ (có cỡ n) tỉ lệ thuận với $f(r, n)$
 
-Đáp án đúng sẽ là :
+"Thông thường thì đây là một vấn đề mở để thực hiện lấy mẫu dự trữ với một hàm bias bất kì, tuy nhiên phương pháp thường đc dùng là hàm exponential bias"
+Hàm exponential bias: 
 $$
-\frac {\mat d}{\mat s+ \mat d}
+f(r,n) = e^{\ld(n-r)}
 $$
-Kết quả của phương pháp lấy mẫu là:
-$$
-\frac {\mat d / 100}{\mat s/10 + \mat d/100 + 18 \mat d/100} = \frac {\mat d}{10 \mat s + 19 \mat d}
-$$
+- $\ld$ là tỉ lệ bias và thường nằm trong khoảng $[0,1]$, $\ld=0$ nghĩa là unbiased và ngược lại
+- Hàm exponential bias là một hàm ko bộ nhớ
+"Nghĩa là xác suất đưa 1 điểm bất kì vào trong mẫu ko phụ thuộc vào quá khứ hay thời gian đến".
 
-=> Ko có số dương nào cho $\mat s$ và $\mat d$ thỏa mãn: 
-$$
-\frac {\mat d}{\mat s + \mat d} = \frac {\mat d}{10\mat s + 19 \mat d}
-$$
+**Chúng ta chỉ xét trường hợp $k < 1 / \ld$**:
+"Vấn đề sẽ trở nên đáng quan tâm nếu ở trong tình trạng không gian bộ nhớ bị giới hạn, khi mà kích cỡ bộ nhớ dự trữ $k$ nhỏ hơn $1/\ld$"
+Mẫu của exponential bias từ một luồng với độ dài vô hạn, độ dài của nó sẽ ko vượt quá $1/\ld$ 
+
+Thuật toán:
+Bắt đầu: một bộ nhớ dự trữ trống.
+Chúng ta sẽ dùng chính sách (policy) này để lấp đầy bộ nhớ dự trữ:
+- 1. Khi điểm thứ $n+1$ xuất hiện:
+	- Chèn điểm đó vào bộ nhớ dự trữ với xác suất $\ld \cdot k$ 
+	- Tung một đồng xu với xác xuất thành công: $F(n) \in [0,1]$ ~ tỉ lệ bộ nhớ đã bị lấp đầy.
+		- Nếu thành công: Chọn ngẫu nhiên một điểm trong bộ nhớ và thay thế với điểm mới
+		- Nếu thất bại: Thêm điểm mới vào bộ nhớ và ko cần xóa
+* 2. 1. Bộ nhớ đc lấp đầy nhanh lúc ban đầu và chậm lại khi gần đạt dung lượng tối đa.
+### 2.1.2 Các giới hạn có ích cho việc lấy mẫu
+"Cần đánh giá xem các mẫu đã lấy có đủ chất lượng để thực hiện các phân tích tiếp theo hay ko".
+"Một trong những ứng dụng của việc lấy mẫu là để ước lượng các giá trị thống kê tổng hợp như tổng, trung bình, trung vị, etc."
+"Độ chính xác của những giá trị đó thường đc định lượng bằng các bất đẳng thức đuôi".
+
+- Gọi $X$ là một biến ngẫu nhiên với một phân phối xác suất: $f_X(x)$, kì vọng $\E[X]$, và phương sai $\text{Var}[X]$.
+	- Bất đẳng thức Markov: Nếu $X$ là một biến ngẫu nhiên chỉ nhận các giá trị không âm, thì với bất kì hằng số $\a$ thỏa mãn $\E[X]<\a$, thì điều sau đây luôn đúng: $$P(X>\a) \le \frac { \E [X]}{\a} \iff \E[X] \ge \a P(X>\a)$$
+	- Bất đẳng thức Chebychev: Nếu $X$ là một biến ngẫu nhiên bất kì, thì, với mọi hằng số $\a$, thì điều sau đây luôn đúng: $$P(|X-\E[X]> \a |) \le \frac {\text{Var}[X]}{\a^2}$$
+	- Cận Chernoff cho đuôi dưới: Nếu $X$ là một biến ngẫu nhiên có thể biểu diễn như là tổng của $n$ biến ngẫu nhiên độc lập nhị phân (Bernoulli), mỗi biến có giá trị bằng $1$ với xác suất $p_i$: $$X = \sum_{i=1}^n X_i$$, thì với bất kì $\delta \in (0,1)$, chúng ta có: $$P(X < (1-\delta)\E[X]) < e^{-\E[X]\delta^2/2}$$
+	- Cận Chernoff cho đuôi trên: Nếu $X$ là một biến ngẫu nhiên có thể biểu diễn như là tổng của $n$ biến ngẫu nhiên độc lập nhị phân (Bernoulli), mỗi biến có giá trị bằng $1$ với xác suất $p_i$: $$X = \sum_{i=1}^n X_i$$, Thì, với mọi $\delta \in (0, 2e-1)$, chúng ta có: $$P(X>(1-\delta)\E[X])<e^{-\E[X]\delta^2/4}$$
+	- Bất đẳng thức Hoeffding: Nếu $X$ là một biến ngẫu nhiên có thể biểu diễn như là tổng của $n$ biến ngẫu nhiên độc lập, mỗi biến bị giới hạn trong khoảng $[l_i, u_i]$: $$X = \sum_{i=1}^n X_i$$, Thì, với mọi $\theta > 0$, ta có: $$\begin{align} P(X-\E[X] > \theta) &\le e^{-\frac {2\theta^2}{\sum_{i=1}^n (u_i - l_i)^2}} \\  P(\E[X]-X> \theta) & \le e^{-\frac {2\theta^2}{\sum_{i=1}^n (u_i - l_i)^2}} \end{align}$$
+
+|           | Trường hợp                                   | Sức mạnh |
+| --------- | -------------------------------------------- | -------- |
+| Chebychev | Bất kì biến ngẫu nhiên nào                   | Yếu      |
+| Markov    | Biến ngẫu nhiên không âm                     | Yếu      |
+| Hoeffding | Tổng các biến độc lập ngẫu nhiên bị giới hạn | Mạnh     |
+| Chernoff  | Tổng các biến độc lập Bernoulli ngẫu nhiên   | Mạnh     |
+
+## 2.2 Các cấu trúc tóm gọn cho các miền lớn
+## 2.2.1 Tổng quan
+## 2.2.2 Các cấu trúc dữ liệu
+### 2.2.2.1 Bộ lọc Bloom
+### 2.2.2.2 Count-min sketch
+### 2.2.2.3 Ước lượng các mô-men và Thuật toán AMS
+### 2.2.2.4 Đếm các phần tử duy nhất và thuật toán Flajolet-Martin
+"\[flaʒɔlɛ\]" 
+#### 2.2.2.5 Đếm số lượng 1 trong 1 cửa sổ và thuật toán DGIM
+### 2.2.2.6 Của sổ suy giảm
+## 2.3 So sánh
