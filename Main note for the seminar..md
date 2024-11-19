@@ -92,7 +92,24 @@ Chúng ta sẽ dùng chính sách (policy) này để lấp đầy bộ nhớ d�
 		- Nếu thành công: Chọn ngẫu nhiên một điểm trong bộ nhớ và thay thế với điểm mới
 		- Nếu thất bại: Thêm điểm mới vào bộ nhớ và ko cần xóa
 * 2. 1. Bộ nhớ đc lấp đầy nhanh lúc ban đầu và chậm lại khi gần đạt dung lượng tối đa.
-### 2.1.2 Các giới hạn lấy mẫu có ích
+### 2.1.2 Các giới hạn có ích cho việc lấy mẫu
+"Cần đánh giá xem các mẫu đã lấy có đủ chất lượng để thực hiện các phân tích tiếp theo hay ko".
+"Một trong những ứng dụng của việc lấy mẫu là để ước lượng các giá trị thống kê tổng hợp như tổng, trung bình, trung vị, etc."
+"Độ chính xác của những giá trị đó thường đc định lượng bằng các bất đẳng thức đuôi".
+
+- Gọi $X$ là một biến ngẫu nhiên với một phân phối xác suất: $f_X(x)$, kì vọng $\E[X]$, và phương sai $\text{Var}[X]$.
+	- Bất đẳng thức Markov: Nếu $X$ là một biến ngẫu nhiên chỉ nhận các giá trị không âm, thì với bất kì hằng số $\a$ thỏa mãn $\E[X]<\a$, thì điều sau đây luôn đúng: $$P(X>\a) \le \frac { \E [X]}{\a} \iff \E[X] \ge \a P(X>\a)$$
+	- Bất đẳng thức Chebychev: Nếu $X$ là một biến ngẫu nhiên bất kì, thì, với mọi hằng số $\a$, thì điều sau đây luôn đúng: $$P(|X-\E[X]> \a |) \le \frac {\text{Var}[X]}{\a^2}$$
+	- Cận Chernoff cho đuôi dưới: Nếu $X$ là một biến ngẫu nhiên có thể biểu diễn như là tổng của $n$ biến ngẫu nhiên độc lập nhị phân (Bernoulli), mỗi biến có giá trị bằng $1$ với xác suất $p_i$: $$X = \sum_{i=1}^n X_i$$, thì với bất kì $\delta \in (0,1)$, chúng ta có: $$P(X < (1-\delta)\E[X]) < e^{-\E[X]\delta^2/2}$$
+	- Cận Chernoff cho đuôi trên: Nếu $X$ là một biến ngẫu nhiên có thể biểu diễn như là tổng của $n$ biến ngẫu nhiên độc lập nhị phân (Bernoulli), mỗi biến có giá trị bằng $1$ với xác suất $p_i$: $$X = \sum_{i=1}^n X_i$$, Thì, với mọi $\delta \in (0, 2e-1)$, chúng ta có: $$P(X>(1-\delta)\E[X])<e^{-\E[X]\delta^2/4}$$
+	- Bất đẳng thức Hoeffding: Nếu $X$ là một biến ngẫu nhiên có thể biểu diễn như là tổng của $n$ biến ngẫu nhiên độc lập, mỗi biến bị giới hạn trong khoảng $[l_i, u_i]$: $$X = \sum_{i=1}^n X_i$$, Thì, với mọi $\theta > 0$, ta có: $$\begin{align} P(X-\E[X] > \theta) &\le e^{-\frac {2\theta^2}{\sum_{i=1}^n (u_i - l_i)^2}} \\  P(\E[X]-X> \theta) & \le e^{-\frac {2\theta^2}{\sum_{i=1}^n (u_i - l_i)^2}} \end{align}$$
+
+|           | Trường hợp                                   | Sức mạnh |
+| --------- | -------------------------------------------- | -------- |
+| Chebychev | Bất kì biến ngẫu nhiên nào                   | Yếu      |
+| Markov    | Biến ngẫu nhiên không âm                     | Yếu      |
+| Hoeffding | Tổng các biến độc lập ngẫu nhiên bị giới hạn | Mạnh     |
+| Chernoff  | Tổng các biến độc lập Bernoulli ngẫu nhiên   | Mạnh     |
 
 ## 2.2 Các cấu trúc tóm gọn cho các miền lớn
 ## 2.2.1 Tổng quan
