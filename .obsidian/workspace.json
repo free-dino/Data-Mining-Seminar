@@ -22,41 +22,41 @@
             }
           },
           {
-            "id": "b96929608d69e108",
+            "id": "ebf5557c401f12c5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Trung/Lọc và Lấy mẫu luồng dữ liệu.md",
+                "file": "Seminar khai phá luồng dữ liệu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lọc và Lấy mẫu luồng dữ liệu"
+              "title": "Seminar khai phá luồng dữ liệu"
             }
           }
         ]
       },
       {
-        "id": "0af68f025a634538",
+        "id": "66c3f35d098d76e5",
         "type": "tabs",
         "children": [
           {
-            "id": "46939d040bc31dc1",
+            "id": "2af9ee1278c004a8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/NOTE 4+3 Tuấn Anh.md",
+                "file": "temp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NOTE 4+3 Tuấn Anh"
+              "title": "temp"
             }
           },
           {
-            "id": "02311c5af1941dea",
+            "id": "b96929608d69e108",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -68,15 +68,17 @@
             }
           },
           {
-            "id": "d651ff889ea50eb0",
+            "id": "3ad7a10564b74c34",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "books/Book3-MiningOfMassiveDatasets.pdf"
+                "file": "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Book3-MiningOfMassiveDatasets"
+              "icon": "lucide-file",
+              "title": "Phần 7. Streaming Outlier Detection"
             }
           }
         ]
@@ -232,17 +234,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "46939d040bc31dc1",
+  "active": "f7a91db3fc92a92a",
   "lastOpenFiles": [
+    "temp.md",
+    "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
     "Main note for the seminar..md",
-    "books/Book3-MiningOfMassiveDatasets.pdf",
+    "Seminar khai phá luồng dữ liệu.md",
+    "Pasted image 20241121040025.png",
+    "Pasted image 20241121035933.png",
     "books/Book2-DataMiningTheTextbook.pdf",
+    "Notes/Chính/CluStream Algorithm.md",
+    "Notes/Chính/STREAM Algorithm.md",
+    "Notes/Chính/Lossy Counting Algorithm.md",
+    "Notes/Chính/Synopsis Structures.md",
+    "Notes/NOTE 4+3 Tuấn Anh.md",
+    "books/Book3-MiningOfMassiveDatasets.pdf",
+    "Notes/Chính/Frequent Pattern Mining in Data Streams.md",
+    "Pasted image 20241120214312.png",
     "Notes/Trung/Lọc và Lấy mẫu luồng dữ liệu.md",
     "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
-    "Notes/NOTE 4+3 Tuấn Anh.md",
     "Notes/Linh 7+8/Phần 8. Streaming Classification.md",
-    "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
-    "Seminar khai phá luồng dữ liệu.md",
     "conflict-files-obsidian-git.md",
     "Pasted image 20241120133430.png",
     "Pasted image 20241120130201.png",
@@ -255,11 +266,6 @@
     "chứng minh xác suất.md",
     "Bloom filter.md",
     "().md",
-    "Notes/Chính/STREAM Algorithm.md",
-    "Notes/Chính/Lossy Counting Algorithm.md",
-    "Notes/Chính/Frequent Pattern Mining in Data Streams.md",
-    "Notes/Chính/CluStream Algorithm.md",
-    "Notes/Chính/Synopsis Structures.md",
     "Notes/Chính",
     "Notes/Sáng/Yêu cầu..md",
     "Pasted image 20241118013304.png",
@@ -267,7 +273,6 @@
     "Notes/Trung",
     "image/Pasted image 20241112172004.png",
     "image/Pasted image 20241112171830.png",
-    "image/Pasted image 20241112171312.png",
     "preamble.sty~",
     "Notes/Sáng/Book 2/Introduction.md",
     "Notes/Sáng/Book 2",
@@ -275,10 +280,7 @@
     "Proofs",
     "KaTeX help.md",
     "Test from Sáng.md",
-    "Test from Trung.md",
     "Notes/Sáng",
-    "preamble.sty",
-    "image/Pasted image 20241108145346.png",
-    "image/Pasted image 20241108143813.png"
+    "preamble.sty"
   ]
 }

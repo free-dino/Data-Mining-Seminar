@@ -20,7 +20,6 @@
 **Microcluster** là cách tóm tắt thông tin chi tiết của dữ liệu luồng. Mỗi microcluster lưu trữ các thống kê tổng hợp về dữ liệu trong một khoảng thời gian.
 
 #### Định nghĩa:
-
 Một microcluster được biểu diễn bởi một bộ 5 thông tin chính, gọi là (2·d + 3)-tuple:
 
 - **CF2x:** Tổng bình phương các giá trị dữ liệu trên mỗi chiều.
@@ -50,7 +49,7 @@ Microcluster được lưu trữ tại các mốc thời gian chụp nhanh (snap
     - **Order** của snapshot quy định mức độ phân giải thời gian mà snapshot được lưu trữ, với các snapshot ở các cấp thấp (order cao) lưu trữ ở mức độ phân giải thô hơn, trong khi các snapshot ở các cấp cao (order thấp) lưu trữ ở mức độ phân giải chi tiết hơn.
 2. **Lưu trữ các snapshot dựa trên các quy tắc phân giải**:
     
-    - Các **snapshot của order i** được lưu tại các thời điểm sao cho thời gian hệ thống phải chia hết cho αi\alpha^iαi, với α\alphaα là một số nguyên và α≥1\alpha \geq 1α≥1.
+    - Các **snapshot của order i** được lưu tại các thời điểm sao cho thời gian hệ thống phải chia hết cho αi\alpha^iαi, với α\alphaα là một số nguyên và $\alpha \geq 1$ 
     - **Chỉ lưu trữ các snapshot gần nhất**: Ở mỗi order, chỉ giữ lại αl+1\alpha^l + 1αl+1 snapshot gần nhất. Điều này giúp giảm thiểu việc lưu trữ dư thừa và tiết kiệm bộ nhớ.
 3. **Sử dụng tính toán gần đúng cho các khung thời gian**:
     
@@ -115,10 +114,10 @@ Người dùng yêu cầu phân cụm dữ liệu trong 1 giờ gần nhất. S�
 
 ## 5. So sánh với STREAM Algorithm
 
-|**Tiêu chí**|**CluStream Algorithm**|**STREAM Algorithm**|
-|---|---|---|
-|**Concept Drift**|Xử lý tốt, tái phân cụm theo thời gian|Không xử lý được|
-|**Phân cụm thời gian**|Hỗ trợ khung thời gian khác nhau|Không hỗ trợ|
-|**Hiệu quả tính toán**|Tốn tài nguyên hơn|Tính toán đơn giản hơn|
-|**Ứng dụng**|Phân tích nâng cao, theo dõi xu hướng dài hạn|Tổng hợp nhanh, bộ nhớ hạn chế|
+| **Tiêu chí**           | **CluStream Algorithm**                       | **STREAM Algorithm**           |
+| ---------------------- | --------------------------------------------- | ------------------------------ |
+| **Concept Drift**      | Xử lý tốt, tái phân cụm theo thời gian        | Không xử lý được               |
+| **Phân cụm thời gian** | Hỗ trợ khung thời gian khác nhau              | Không hỗ trợ                   |
+| **Hiệu quả tính toán** | Tốn tài nguyên hơn                            | Tính toán đơn giản hơn         |
+| **Ứng dụng**           | Phân tích nâng cao, theo dõi xu hướng dài hạn | Tổng hợp nhanh, bộ nhớ hạn chế |
 
