@@ -5,7 +5,7 @@
 1. **Ngoại lệ dựa trên phát hiện ở các bản ghi cá nhân.**  
     một điểm dữ liệu đơn lẻ nổi bật, ví dụ, một tin tức quan trọng đầu tiên trên một chủ đề. Điều này thường là tín hiệu ban đầu của một sự kiện mới.Ngoại lệ này cũng thường được gọi là **sự mới lạ**.
     
-1. **Ngoại lệ dựa trên thay đổi trong xu hướng tổng hợp của dữ liệu đa chiều.**  
+2. **Ngoại lệ dựa trên thay đổi trong xu hướng tổng hợp của dữ liệu đa chiều.**  
 	 Những thay đổi trong xu hướng chung, chẳng hạn một loạt tin tức về một chủ đề do một sự kiện lớn. Điều này phản ánh sự thay đổi đáng kể trong dữ liệu.
     Ví dụ, một sự kiện bất thường như một cuộc tấn công khủng bố có thể dẫn đến một loạt các tin tức về một chủ đề cụ thể. Điều này đại diện cho một ngoại lệ tổng hợp dựa trên một khung thời gian cụ thể. Loại thay đổi điểm này thường bắt đầu với một ngoại lệ cá nhân thuộc loại đầu tiên. Tuy nhiên, một ngoại lệ cá nhân không phải lúc nào cũng phát triển thành một điểm thay đổi tổng hợp. Khái niệm này liên quan chặt chẽ đến **trôi dạt khái niệm** (concept drift). Khi sự thay đổi của dữ liệu và xu hướng diễn ra từ từ, đó là **trôi dạt khái niệm**. Nhưng nếu sự thay đổi xảy ra đột ngột (ví dụ, một sự kiện bất ngờ), thì đó là **ngoại lệ**
     
@@ -55,7 +55,7 @@ tóm lại, có thể phát hiện ngoại lệ bằng **hai phương pháp chí
 # 2. Aggregate Change Points as Outliers
 (Điểm thay đổi tổng hợp là ngoại lệ)
 ## 2.1. Tóm tắt khái niệm về mật độ vận tốc (velocity density)
-Những thay đổi đột ngột trong các xu hướng cục bộ và toàn phần của dữ liệu cơ bản thường chỉ ra các sự kiện bất thường trong dữ liệu. Nhiều phương pháp cũng cung cấp cách định lượng thống kê mức độ thay đổi trong dòng dữ liệu. Một cách để đo lường sự **drift** (trôi khái niệm) là sử dụng khái niệm **velocity density** (mật độ vận tốc). Ý tưởng trong việc ước tính mật độ vận tốc là xây dựng hồ sơ mật độ dựa trên vận tốc của dữ liệu. Điều này tương tự với khái niệm ước tính mật độ hạt nhân (kernel density estimation) trong các tập dữ liệu tĩnh.
+Những thay đổi đột ngột trong các xu hướng cục bộ và toàn phần của dữ liệu cơ bản thường chỉ ra các sự kiện bất thường trong dữ liệu. Một cách để đo lường sự **drift** (trôi khái niệm) là sử dụng khái niệm **velocity density** (mật độ vận tốc). Ý tưởng trong việc ước tính mật độ vận tốc là xây dựng hồ sơ mật độ dựa trên vận tốc của dữ liệu. Điều này tương tự với khái niệm ước tính mật độ hạt nhân (kernel density estimation) trong các tập dữ liệu tĩnh.
 	Phương pháp ước tính mật độ hạt nhân $\bar{f}(\bar{X})$ cho $n$ điểm dữ liệu và hàm hạt nhân $K_h ^′(⋅)$ được định nghĩa như sau:
 $$
 	f(\bar{X}) = \frac{1}{n} \sum_{i=1}^{n} K'_h(\bar{X} - \bar{X}_i)
@@ -79,7 +79,7 @@ $$
 Các phép tính mật độ vận tốc được thực hiện trên một cửa sổ thời gian có kích thước $h_t​$. Trực quan cho thấy giá trị $h_t$​ xác định khoảng thời gian mà sự tiến hóa được đo lường.
 	Ví dụ: nếu $h_t$ được chọn lớn thì kỹ thuật ước lượng mật độ vận tốc sẽ đưa ra các xu hướng dài hạn, trong khi nếu $h_t$ được chọn nhỏ thì các xu hướng đó tương đối ngắn hạn. 
 
-## 2.2. Mật độ lát cắt thời gian thuận và nghịch (Forward & Reverse Time-Slice Density)
+## 2.2. Mật độ lát cắt thời gian xuôi và ngược (Forward & Reverse Time-Slice Density)
 
 Giả sử t là thời điểm hiện tại và S là tập hợp các điểm dữ liệu đã đến trong cửa sổ thời gian $(t−h_t, t)$. Tốc độ tăng mật độ tại vị trí không gian $\mathbf{X}$ và thời gian t được ước lượng thông qua hai đại lượng:
 
@@ -120,7 +120,8 @@ $$
 		Trong đó:
 		- Tập U bao gồm các điểm dữ liệu trong tương lai.
 		- $C_r​$: Hằng số chuẩn hóa để đảm bảo tổng mật độ trên toàn bộ không gian bằng 1 
-- Mật độ vận tốc $V_{(h_s, h_t)}(X, T$) tại vị trí không gian X và thời gian T được định nghĩa như sau:
+		
+	Mật độ vận tốc $V_{(h_s, h_t)}(X, T$) tại vị trí không gian X và thời gian T được định nghĩa như sau:
 $$
 	\
 V_{(h_s, h_t)}(\mathbf{X}, T) = \frac{F_{(h_s, h_t)}(\mathbf{X}, T) - R_{(h_s, h_t)}(\mathbf{X}, T - h_t)}{h_t}

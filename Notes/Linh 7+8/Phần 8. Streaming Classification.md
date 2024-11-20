@@ -82,7 +82,7 @@ $$
 - Các cây con được xây dựng đồng thời với cây chính.
 - Khi thuộc tính chia tốt nhất thay đổi do **concept drift**, cây con thay thế sẽ được sử dụng để thay thế cây chính.
 
-**. Kết quả thực nghiệm**
+**Kết quả thực nghiệm**
 - CVFDT đạt độ chính xác cao hơn so với VFDT trong các luồng dữ liệu có sự thay đổi khái niệm (**concept-drifting data streams**).
 ## 2. Supervised Microcluster Approach
 Microcluster có giám sát là một phương pháp phân loại dựa trên mẫu (instance-based classification). Trong mô hình này, giả định rằng một luồng dữ liệu huấn luyện (training stream) và một luồng dữ liệu kiểm tra (test stream) được nhận đồng thời theo thời gian. Vì hiện tượng **concept drift**, việc điều chỉnh mô hình một cách linh hoạt là rất quan trọng.
