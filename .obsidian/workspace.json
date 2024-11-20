@@ -73,15 +73,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
+                "file": "Notes/Linh 7+8/Phần 8. Streaming Classification.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Phần 7. Streaming Outlier Detection"
+              "title": "Phần 8. Streaming Classification"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -234,15 +235,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f7a91db3fc92a92a",
+  "active": "3ad7a10564b74c34",
   "lastOpenFiles": [
-    "temp.md",
     "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
     "Main note for the seminar..md",
+    "temp.md",
+    "books/Book2-DataMiningTheTextbook.pdf",
     "Seminar khai phá luồng dữ liệu.md",
     "Pasted image 20241121040025.png",
     "Pasted image 20241121035933.png",
-    "books/Book2-DataMiningTheTextbook.pdf",
     "Notes/Chính/CluStream Algorithm.md",
     "Notes/Chính/STREAM Algorithm.md",
     "Notes/Chính/Lossy Counting Algorithm.md",

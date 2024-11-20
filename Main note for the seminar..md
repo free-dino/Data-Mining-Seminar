@@ -1,5 +1,3 @@
-"Seminar ngày hôm nay của nhóm mình sẽ nói về luồng dữ liệu và xử lý luồng dữ liệu. Mục tiêu của Seminar này sẽ cũng cấp cho các bạn các kiến thức về: Luồng dữ liệu, Các cấu trúc dữ liệu đc dùng để lưu trữ dạng dữ liệu này, các thuật toán khai phá mẫu, các thuật toán phân cụm, phát hiện điểm ngoại lai, phân lớp trong luồng dữ liệu. Vì bài rất dài, nên nếu mọi nguời có câu hỏi thì xin hãy note lại và hỏi sau khi nhóm đã thuyết trình xong".
-
 # Mục tiêu:
 Cung cấp kiến thức về:
 - Luồng dữ liệu
@@ -31,10 +29,6 @@ Cung cấp kiến thức về:
 	- Bất biến
 - ### 1.1.4 Giới thiệu về hệ thống quản lý luồng dữ liệu (DSMS):
 	![[Pasted image 20241118013304.png]]
-	 "Chúng ta có thể hình dung một bộ xử lý dữ liệu luồng như là một hệ thống quản lý dữ liệu.
-	 Bất kể luồng dữ liệu nào cũng có thể đc đưa vào hệ thống. Chúng có thể khác nhau về thời gian đến, tần suất đến và kể cả khác nhau về kiểu dữ liệu.
-	 Có 2 nơi lưu trữ dữ liệu, nơi đầu tiên là kho lưu trữ lớn, chúng ta assume ko thể truy xuất dữ liệu từ kho chứa này.
-	 Có 1 kho hoạt động, nó lưu các bản tóm tắt, hoặc là các phần nhỏ của luồng. Dữ liệu ở kho này đc dùng để trả lời các lệnh truy vấn. Tuy nhiên sức chứa của nó có hạn, ko thể lưu trữ toàn bộ thông tin."
 ## 1.2 Các thách thức chính trong xử lý luồng dữ liệu:
 - Luồng dữ liệu thường đc xử lý dưới một số ràng buộc nhất định:
 	- Ràng buộc 1 lần duy nhất: *Dữ liệu đến rất nhanh và liên tục -> chỉ có thể xử lý 1 lần duy nhất.*
@@ -43,18 +37,11 @@ Cung cấp kiến thức về:
 	- Ràng buộc phạm vi rộng lớn: *khi các đặc trưng của dữ liệu là rời rạc, chúng có thể là những số rất lớn hoặc rất đặc trưng.*
 - Yêu cầu phân tích thời gian thực
 - Giới hạn bộ nhớ và tính toán
-
-"Chúng ta khó có phần cứng có thể đáp ứng việc thu thập và phân tích luồng dữ liệu. Vì vậy chúng ta sẽ nhìn vào việc lấy mẫu dữ liệu, vì thường sẽ hiệu quả hơn khi ước tính kết quả hơn là tìm kết quả chính xác,"
 # Phần 2: Các cấu trúc dữ liệu tóm gọn cho luồng dữ liệu
 Có hai loại cấu trúc dữ liệu tóm gọn:
 - Cấu trúc chung: đc dùng cho mọi trường hợp một cách trực tiếp.
 - Các cấu trúc cụ thể: Dùng cho các trường hợp cụ thể như là đếm tần suất, đếm số lượng
 ## 2.1 Lấy mẫu dự trữ (Reservoir Sampling)
-"Lấy mẫu là một trong những phương pháp linh hoạt nhất cho tóm tắt luồng, và đặc biệt là chúng có thể đc dùng cho nhiều trường hợp khác nhau"
-
-"Trong lấy mẫu dự trữ, một mẫu gồm $k$ điểm sẽ đc duy trì một cách dynamically từ luồng dữ liệu."
-"-> Phương pháp lấy mẫu sẽ hoạt động với "kiến thức ko đầy đủ" về lịch sử của luồng tại bất kì thời điêm nào. Nói cách khác, chúng ta phải đưa ra 2 quyết định: 1: Luật lấy mẫu, 2: Luật xóa khỏi mẫu"
-
 **Phương pháp**:
 Với một một mẫu dự trữ size $k$, $k$ điểm dữ liệu đầu tiên của luồng sẽ đc dùng để khởi tạo quá trình dự trữ, 2 điều sau đây sẽ đc áp dụng:
 - Chèn điểm dữ liệu thứ $n$ vào mẫu dự trữ với xác suất $k/n$ 
@@ -65,22 +52,16 @@ Với một một mẫu dự trữ size $k$, $k$ điểm dữ liệu đầu tiê
 Sau khi $n$ điểm của luồng dữ liệu đến bộ xử lý, xác suất mà bất kì điểm dữ liệu nào được cho vào mẫu dự trữ là như nhau và bằng $k/n$.
 
 ### 2.1.1 Xử lý chuyển dịch khái niệm:
-"Trong xử lý luồng dữ liệu, thì dữ liệu mới thường quan trọng hơn dữ liệu cũ vì dữ liệu có sự thay đổi qua thời gian vì chúng có giá trị phân tích cao hơn. Vì vậy bài toán đặt ra là: Làm sao để xác suất đưa các dữ liệu gần đây vào mẫu cao hơn, chúng ta có thể đạt được điều này bằng một hàm bias"
-
 **Bias function**: 
 Với $f(r,n)$ là một hàm bias cho điểm dữ liệu thứ $r$ tại thời điểm đến của điểm dữ liệu thứ $n$, một mẫu biased $\mathcal S(n)$ tại thời điểm đến của điểm dữ liệu thứ $n$ trong luồng được định nghĩa là một mẫu sao cho xác suất tương đối $p(r,n)$ của điểm thứ $r$ thuộc mẫu $S(n)$ (có cỡ n) tỉ lệ thuận với $f(r, n)$
-
-"Thông thường thì đây là một vấn đề mở để thực hiện lấy mẫu dự trữ với một hàm bias bất kì, tuy nhiên phương pháp thường đc dùng là hàm exponential bias"
 Hàm exponential bias: 
 $$
 f(r,n) = e^{\ld(n-r)}
 $$
 - $\ld$ là tỉ lệ bias và thường nằm trong khoảng $[0,1]$, $\ld=0$ nghĩa là unbiased và ngược lại
 - Hàm exponential bias là một hàm ko bộ nhớ
-"Nghĩa là xác suất đưa 1 điểm bất kì vào trong mẫu ko phụ thuộc vào quá khứ hay thời gian đến".
 
 **Chúng ta chỉ xét trường hợp $k < 1 / \ld$**:
-"Vấn đề sẽ trở nên đáng quan tâm nếu ở trong tình trạng không gian bộ nhớ bị giới hạn, khi mà kích cỡ bộ nhớ dự trữ $k$ nhỏ hơn $1/\ld$"
 Mẫu của exponential bias từ một luồng với độ dài vô hạn, độ dài của nó sẽ ko vượt quá $1/\ld$ 
 
 Thuật toán:
@@ -93,9 +74,6 @@ Chúng ta sẽ dùng chính sách (policy) này để lấp đầy bộ nhớ d�
 		- Nếu thất bại: Thêm điểm mới vào bộ nhớ và ko cần xóa
 * 2. 1. Bộ nhớ đc lấp đầy nhanh lúc ban đầu và chậm lại khi gần đạt dung lượng tối đa.
 ### 2.1.2 Các giới hạn có ích cho việc lấy mẫu
-"Cần đánh giá xem các mẫu đã lấy có đủ chất lượng để thực hiện các phân tích tiếp theo hay ko".
-"Một trong những ứng dụng của việc lấy mẫu là để ước lượng các giá trị thống kê tổng hợp như tổng, trung bình, trung vị, etc."
-"Độ chính xác của những giá trị đó thường đc định lượng bằng các bất đẳng thức đuôi".
 
 - Gọi $X$ là một biến ngẫu nhiên với một phân phối xác suất: $f_X(x)$, kì vọng $\E[X]$, và phương sai $\text{Var}[X]$, chúng ta có các bất đẳng thức sau.
 	- Bất đẳng thức Markov: Nếu $X$ là một biến ngẫu nhiên chỉ nhận các giá trị không âm, thì với bất kì hằng số $\a$ thỏa mãn $\E[X]<\a$, thì điều sau đây luôn đúng: $$P(X>\a) \le \frac { \E [X]}{\a} \iff \E[X] \ge \a P(X>\a)$$
@@ -113,7 +91,6 @@ Chúng ta sẽ dùng chính sách (policy) này để lấp đầy bộ nhớ d�
 
 ## 2.2 Các cấu trúc tóm gọn cho các miền lớn
 ## 2.2.1 Tổng quan
-"Trong xử lý luồng, chúng ta gặp phải một số hạn chế khi xử lý các thuộc tính rời rạc với miền giá trị lớn"
 Hạn chế:
 - Cặp định danh: Dữ liệu luồng thường bao gồm các cặp giá trị định danh, dẫn đến miền giá trị có số tổ hợp khổng lồ
 - Giới hạn không gian: Với các miền lớn, việc lưu trữ ngay cả những thống kê đơn giản như đếm số lượng hoặc kiểm tra thành viên tập hợp là không khả thi do yêu cầu lưu trữ khổng lồ.
@@ -127,23 +104,15 @@ Một bộ lọc Bloom $\mathcal B$ bao gồm:
 - 1. Một mảng gồm $m$ bits, khởi tạo tất cả đều bằng $0$.
 - 2. Một tập hợp các hàm băm $h_1, h_2, \cdots, h_w$. Mỗi hàm băm ánh xạ giá trị "khóa" vào $m$ ô chứa, tương ứng với $m$ bits của mảng trên.
 - 3. Một tập $\mathcal S$ với $n$ khóa.
-
 Quy trình lọc: 
 - Khởi tạo mảng toàn bộ thành $0$
 - Với mỗi $x \in \mathcal S$: $h_i(x) \leftarrow 1$ 
-
 ![[Pasted image 20241120130201.png]]
-
-
 Kiểm tra xem một khóa ở trong bộ lọc hay chưa:
 - Dùng hàm băm để tìm vị trí đánh dấu
 - Nếu tất cả vị trí = 1, thì có lẽ (chưa chắc) phần tử đã xuất hiện hay chưa
 - Nếu có ít nhất 1 vị trí bằng 0, chắc chắn phần tử chưa từng xuất hiện
-
 Bổ đề: Nếu một phần tử $x$ chưa từng xuất hiện trong tập $\mathcal S$, thì xác suất $F$ để phần tử $x$ đó bị coi là dương tính giả được cho bởi công thức: $$F = \Bigg[1 - \Bigg(1 - \frac 1 m\Bigg)^{w-n} \Bigg]^w$$
-"dương tính giả trong trường hợp này là: khi bộ lọc báo phần tử đã ở trong S trong khi nó ko hề có".
-"Điểm đặc biệt là bộ lọc Bloom ko có âm tính giả, nghĩa là nếu nó chưa xuất hiện thì chắc chắn nó chưa xuất hiện, nếu "
-
 **Lợi ích**: Nhanh và tiết kiệm bộ nhớ
 **Hạn chế**: Dương tính giả và ko thể xóa phần tử
 
@@ -153,9 +122,6 @@ Bổ đề: Nếu một phần tử $x$ chưa từng xuất hiện trong tập $
 - Kiểm tra URL trong danh sách cấm
 
 ### Mô men
-"Các mô men bậc cao hơn sẽ cung cấp các thông tin chi tiết hơn về phân phối phần tử trong luồng, giúp đánh giá mức độ phân tán hay tập trung hay phân tán của giá trị"
-
-**Tổng quan về mô men**:
 **Mô men tần suất**:
 Với $f_i$ là tần suất xuất hiện của phần tử $i$ trong luồng, ta có:
 $$
@@ -166,13 +132,9 @@ $F_1$: Tổng số lần xuất hiện của các phần tử trong luồng
 $F_2$: Tổng bình phương tần suất, hữu ích cho việc ước tính độ xiên của dữ liệu
 ...
 $F_\infty$ : $\max_i f_i$ 
-"Các mô men bậc cao hơn sẽ cung cấp các thông tin chi tiết hơn về phân phối phần tử trong luồng, giúp đánh giá mức độ phân tán hay tập trung hay phân tán của giá trị"
-
 ### 2.2.2.2 Count-min sketch
 "Count-Min Sketch là một cấu trúc dữ liệu xác suất dùng để ước lượng tần suất xuất hiện của các phần tử trong luồng dữ liệu một cách hiệu quả với bộ nhớ hạn chế."
-
 - Ước lượng $F_1$ và $F_\infty$ 
-
 ![[Pasted image 20241120133430.png]]
 
 Count-min Sketch bao gồm: 
@@ -186,26 +148,19 @@ Quy trình cập nhật Count-min Sketch:
 
 Ước lượng tần suất xuất hiện với Count-min Sketch:
 - Đưa input $x$ vào các hàm băm, nhận vị trí trong từng hàm
-- Lấy giá trị nhỏ nhất.
-
+- Lấy giá trị nhỏ nhất
 Ưu điểm: Tiết kiệm bộ nhớ, dễ sử dụng
 Nhược điểm: Ước lượng sai lệch, không chính xác
-
 Ứng dụng: Ước lượng tần suất xuất hiện của phần tử
 ### 2.2.2.3 AMS Sketch
-
 **Alon-Matias-Szegedy (AMS) sketch**
 Thuật toán: 
 - 1. Dùng hàm băm ngẫu nhiên: Hàm băm $h(i)$ ánh xạ phần tử thứ $i$ vào $\{-1, 1\}$  một cách ngẫu nhiên đồng nhất
 - 2. Cập nhật luồng: Duy trì một bộ đếm $Z$, khởi tạo bằng $0$
 	- Khi $a_i$ xuất hiện trong luồng, cập nhật $Z$: $$Z = \sum_i h(a_i)$$
 - 3. Ước lượng $F_2$: $$F_2 \approx Z^2$$
-
 ### 2.2.2.4 Đếm các phần tử duy nhất và thuật toán Flajolet-Martin
-"\[flaʒɔlɛ\]" 
-
 Ước lượng: $F_0$
-
 Thuật toán:
 - 1. Chọn một hàm băm $h(x)$ ánh xạ phần tử vào khoảng số nguyên lớn: $[0, 2^L -1]$
 - 2. Theo dõi bit 1 có trọng số thấp nhất:
@@ -215,8 +170,6 @@ Thuật toán:
 - 3. Ước lượng số lượng các phần tử duy nhất: $$D = \frac{2^{R_\max}}{\phi}$$
 Ưu điểm: Không gian lưu trữ nhỏ, hiệu quả cho dữ liệu lớn
 Nhược điểm: Ước lượng sai lệch, không thể truy vấn các phần tử
-
-
 ### 2.2.2.5 Đếm số lượng 1 trong 1 cửa sổ và thuật toán DGIM
 "Thuật toán DGIM là một thuật toán rất hiệu quả trong việc ước tính số lượng 1 trong một cửa sổ của luồng nhị phân, để đếm chính xác, chúng ta cần rất nhiều tài nguyên"
 
@@ -390,3 +343,31 @@ Có hai ngoại lệ có thể xuất hiện trong luồng dữ liệu đa chi�
 ### 5.1.2 Phương pháp phân cụm: Microclustering
 - Microcluster: Nhóm các điểm dữ liệu thành một số lượng bộ tóm tắt nhỏ gọn cố định gọi là microcluster, cho phép xử lý hiệu quả các dòng dữ liệu lớn.
 - Xác định ngoại lệ: Các điểm dữ liệu nằm ngoài bán kính thống kê được xác định của các microcluster hiện tại thường được đánh dấu là ngoại lệ.
+
+#### Lợi ích của phân cụm trong phát hiện ngoại lệ trong dòng dữ liệu
+- **Hiệu quả:** Các phương pháp phân cụm chỉ yêu cầu duy trì thống kê tóm tắt của các cụm, tránh được gánh nặng tính toán so cặp giữa các điểm dữ liệu cá nhân.
+- **Khả năng mở rộng:** Các kỹ thuật microcluster xử lý hiệu quả dòng dữ liệu liên tục, duy trì đại diện kích thước cố định của dữ liệu bất kể độ dài của dòng.
+- **Thích nghi với trôi dạt khái niệm:** Bằng cách điều chỉnh ranh giới cụm và tạo các cụm mới, các phương pháp microcluster có thể thích nghi với các xu hướng dữ liệu tiến hóa và xác định các ngoại lệ báo hiệu thay đổi trong hành vi dòng dữ liệu.
+
+-> Microcluster thường phù hợp hơn với các luồng dữ liệu lớn nhờ hiệu quả và khả năng thích nghi với trôi dạt khái niệm.
+
+## 5.2 Các điểm thay đổi tổng hợp như là ngoại lệ.
+### 5.2.1 Mật độ vận tốc (velocity density):
+Đo lường sự thay đổi của dòng dữ liệu qua các khung thời gian khác nhau.
+#### 5.2.1.1 Các tham số chính:
+- **Cửa sổ thời gian $(h_t)$:** Xác định khung thời gian mà các thay đổi trong mật độ dữ liệu được đo lường. Giá trị $(h_t)$ lớn nắm bắt các xu hướng dài hạn, trong khi $(h_t)$ nhỏ tập trung vào các biến động ngắn hạn.
+- **Tham số làm mịn không gian $(h_s)$:** Tương tự với độ rộng hạt nhân trong ước lượng mật độ hạt nhân truyền thống, tham số này kiểm soát mức độ làm mịn được áp dụng cho phân phối không gian của các điểm dữ liệu.
+#### 5.2.1.2 Cách tính mật độ vận tốc:
+$$V(h_s, h_t)(X, T) = \frac{F(h_s, h_t)(X, T) - R(h_s, h_t)(X, T - h_t)}{h_t}$$
+
+Với:
+- **Ước lượng mật độ lát thời gian xuôi $F(h_s, h_t)(X, t)$:** Biểu thị mật độ tại vị trí $X$ và thời điểm $t$, dựa trên các điểm dữ liệu đã xuất hiện trong cửa sổ thời gian quá khứ $(t - h_t, t)$.
+- **Ước lượng mật độ lát thời gian ngược $R(h_s, h_t)(X, t)$:** Biểu thị mật độ tại vị trí $X$ và thời điểm $t$, dựa trên các điểm dữ liệu sẽ xuất hiện trong cửa sổ thời gian tương lai $(t, t + h_t)$.
+### 5.2.2 Các Điểm Dữ Liệu Và Thời Điểm Có Sự Thay Đổi Đột Ngột
+- **Các điểm dữ liệu ngoại lệ:** Những điểm nằm trong vùng có giá trị tuyệt đối của mật độ vận tốc bất thường lớn, biểu thị các thay đổi đột ngột trong phân phối dữ liệu cục bộ. Những điểm này có thể là các trường hợp đầu tiên của một xu hướng hoặc sự kiện mới đang gây ra sự thay đổi trong phân phối dữ liệu tổng thể.
+- **Các thời điểm ngoại lệ:** Những thời điểm có mật độ vận tốc tuyệt đối tổng hợp cao, biểu thị sự thay đổi đáng kể trong phân phối dữ liệu trên toàn bộ không gian dữ liệu. Những thời điểm này có thể tương ứng với các sự kiện quan trọng hoặc sự thay đổi trong quá trình tạo dữ liệu cơ bản.
+### 5.2.3 Các Lợi Ích Chính Của Mật Độ Vận Tốc Trong Phát Hiện Ngoại Lệ
+- Nhạy bén với các thay đổi tổng hợp
+- Linh hoạt trong phân tích khung thời gian
+- Đo lường định lượng
+- Phát hiện sớm
