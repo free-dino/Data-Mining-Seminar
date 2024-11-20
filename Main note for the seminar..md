@@ -1,5 +1,5 @@
 # Mục tiêu:
-Cung cấp kiến thức về:
+Cung cấp kiến thức khái quát về:
 - Luồng dữ liệu
 - Các cấu trúc dữ liệu hiệu quả
 - Các thuật toán khai phá mẫu (pattern)
@@ -371,3 +371,35 @@ Với:
 - Linh hoạt trong phân tích khung thời gian
 - Đo lường định lượng
 - Phát hiện sớm
+
+# Phần 6: Phân lớp trong luồng dữ liệu:
+
+## 6.1 Họ Cây quyết định cực nhanh: 
+VFDT dựa trên nền tảng của **Cây Hoeffding**, sử dụng giới hạn Hoeffding để đưa ra các quyết định hiệu quả và chính xác về tiêu chí phân chia trong quá trình xây dựng cây.
+
+### 6.1.1 Cây Hoeffding:
+Sinh ra để giải quyết One-pass Constraint:
+
+**Cách hoạt động**:
+1.  **Tăng Trưởng Dần Dần:** Cây bắt đầu với một nút gốc duy nhất và mở rộng khi dữ liệu đến.
+2.  **Giám Sát Thống Kê:** Với mỗi nút, thuật toán liên tục giám sát phân phối của nhãn lớp và giá trị của các thuộc tính khác nhau cho các điểm dữ liệu đến nút đó.
+3.  **Áp Dụng Giới Hạn Hoeffding:** Giới hạn Hoeffding được sử dụng để xác định số lượng điểm dữ liệu tối thiểu (*n*) cần thiết để đưa ra quyết định phân chia chắc chắn, đảm bảo rằng thuộc tính phân chia được chọn cho mẫu hiện tại, với xác suất cao (1 - *δ*), là cùng một thuộc tính sẽ được chọn nếu sử dụng toàn bộ dòng dữ liệu.
+4.  **Tiêu Chí Phân Chia:** Các tiêu chí phân chia phổ biến như chỉ số Gini hoặc entropy được sử dụng để đánh giá chất lượng của các thuộc tính khác nhau như các đặc trưng phân chia tiềm năng.
+5.  **Quyết Định Phân Chia:** Khi số điểm dữ liệu quan sát tại một nút vượt qua ngưỡng *n* tính toán dựa trên giới hạn Hoeffding, thuật toán chọn thuộc tính có tiêu chí phân chia tốt nhất làm thuộc tính phân chia cho nút đó.
+
+**Cách Tính Ngưỡng Kích Thước Mẫu (n):**
+
+Giới hạn Hoeffding cung cấp một công thức để tính toán *n*:
+
+*n = (R<sup>2</sup> \* ln(1/δ)) / (2\ε<sup>2</sup>)*
+
+Trong đó:
+
+*   *R* là phạm vi của tiêu chí phân chia (ví dụ, 1 cho chỉ số Gini, log(*k*) cho entropy với *k* là số lớp).
+*   *δ* là mức độ tin cậy xác suất mong muốn (ví dụ, 0.05 cho 95% tin cậy).
+*   *ε* đại diện cho sự khác biệt chấp nhận được giữa thuộc tính phân chia tốt nhất và thứ hai dựa trên mẫu. Các giá trị nhỏ của *ε* tương ứng với độ chênh lệch nhỏ, yêu cầu kích thước mẫu lớn hơn.
+
+**Ý Nghĩa Của Giới Hạn Hoeffding:**
+
+*   **Hiệu Quả:** Giới hạn Hoeffding cho phép đưa ra các quyết định phân chia với kích thước mẫu hạn chế, không cần lưu trữ và xử lý toàn bộ dòng dữ liệu.
+*   **Độ Tin Cậy:** Giới hạn cung cấp sự đảm bảo thống kê rằng các phân chia dựa trên mẫu có khả năng cao là các phân chia giống như khi sử dụng toàn bộ dòng dữ liệu.
