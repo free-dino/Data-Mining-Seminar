@@ -113,8 +113,24 @@ Chúng ta sẽ dùng chính sách (policy) này để lấp đầy bộ nhớ d�
 
 ## 2.2 Các cấu trúc tóm gọn cho các miền lớn
 ## 2.2.1 Tổng quan
+"Trong xử lý luồng, chúng ta gặp phải một số hạn chế khi xử lý các thuộc tính rời rạc với miền giá trị lớn"
+Hạn chế:
+- Cặp định danh: Dữ liệu luồng thường bao gồm các cặp giá trị định danh, dẫn đến miền giá trị có số tổ hợp khổng lồ
+- Giới hạn không gian: Với các miền lớn, việc lưu trữ ngay cả những thống kê đơn giản như đếm số lượng hoặc kiểm tra thành viên tập hợp là không khả thi do yêu cầu lưu trữ khổng lồ.
+- Hạn chế của cá kĩ thuật đơn giản: Các kỹ thuật như mảng hoặc lấy mẫu dự trữ không hiệu quả trong các trường hợp này:
+	- Mảng: Yêu cầu kích thước quá lớn
+	- Lấy mẫu dự trữ ko phù hợp với việc đếm các phần tử khác biệt hoặc kiểm tra các thành viên của tập hợp
+- Các cấu trúc chuyên biệt: Không có cấu trúc tóm gọn nào phù hợp cho tất cả các truy vấn.
 ## 2.2.2 Các cấu trúc dữ liệu
 ### 2.2.2.1 Bộ lọc Bloom
+Một bộ lọc Bloom $\mathcal B$ bao gồm:
+- 1. Một mảng gồm $n$ bits, khởi tạo tất cả đều bằng $0$.
+- 2. Một tập hợp các hàm băm $h_1, h_2, \cdots, h_k$. Mỗi hàm băm ánh xạ giá trị "khóa" vào $n$ ô chứa, tương ứng với $n$ bits của mảng trên.
+- 3. Một tập $\mathcal S$ với $m$ khóa.
+![[Pasted image 20241120122727.png]]
+
+Bổ đề: Cho một bộ lọc Bloom $\mathcal B$ với $n$ phần tử và $k$ hàm băm khác nhau. Gọi $\mathcal S$ là một tập hợp chứa $m$ khóa. Nếu một phần tử $x$ chưa từng xuất hiện trong tập $\mathcal S$, thì xác suất $F$ để phần tử $x$ đó được báo cáo là dương tính giả được cho bởi công thức: $$F = \Bigg[1 - \Bigg(1 - \frac 1 n\Bigg)^{k-m} \Bigg]^k$$
+"dương tính giả trong trường hợp này là: khi bộ lọc báo phần tử đã ở trong S trong khi nó ko hề có".
 ### 2.2.2.2 Count-min sketch
 ### 2.2.2.3 Ước lượng các mô-men và Thuật toán AMS
 ### 2.2.2.4 Đếm các phần tử duy nhất và thuật toán Flajolet-Martin
