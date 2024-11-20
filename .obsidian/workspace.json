@@ -46,9 +46,23 @@
               "icon": "lucide-file",
               "title": "Phần 7. Streaming Outlier Detection"
             }
+          },
+          {
+            "id": "e36d207bb4cea819",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Phần 7. Streaming Outlier Detection"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -200,10 +214,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4817f4d7d63b37ac",
+  "active": "e36d207bb4cea819",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Notes/Linh 7+8/Phần 8. Streaming Classification.md",
     "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
+    "conflict-files-obsidian-git.md",
     "Pasted image 20241119201827.png",
     "Notes/Trung/Lọc và Lấy mẫu luồng dữ liệu.md",
     "Notes/NOTE 4+3 Tuấn Anh.md",
@@ -214,7 +229,6 @@
     "Notes/Chính/Frequent Pattern Mining in Data Streams.md",
     "Notes/Chính",
     "2024-11-18.md",
-    "Notes/Linh 7+8/Phần 8. Streaming Classification.md",
     "books/Book2-DataMiningTheTextbook.pdf",
     "Seminar khai phá luồng dữ liệu.md",
     "Notes/Sáng/Yêu cầu..md",
