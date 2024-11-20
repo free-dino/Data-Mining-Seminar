@@ -79,7 +79,8 @@
               "title": "Book3-MiningOfMassiveDatasets"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -234,17 +235,19 @@
   },
   "active": "f7a91db3fc92a92a",
   "lastOpenFiles": [
-    "Notes/NOTE 4+3 Tuấn Anh.md",
     "books/Book3-MiningOfMassiveDatasets.pdf",
-    "books/Book2-DataMiningTheTextbook.pdf",
     "Main note for the seminar..md",
+    "Notes/NOTE 4+3 Tuấn Anh.md",
+    "books/Book2-DataMiningTheTextbook.pdf",
+    "Seminar khai phá luồng dữ liệu.md",
+    "Pasted image 20241120133430.png",
+    "Pasted image 20241120130201.png",
     "Pasted image 20241120122727.png",
     "Untitled.md",
     "Untitled.canvas",
     "Notes/Linh 7+8/Phần 8. Streaming Classification.md",
     "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
     "Notes/Linh 7+8",
-    "Seminar khai phá luồng dữ liệu.md",
     "Pasted image 20241119201827.png",
     "2024-11-18.md",
     "chứng minh xác suất.md",

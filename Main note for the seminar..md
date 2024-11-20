@@ -97,7 +97,7 @@ Chúng ta sẽ dùng chính sách (policy) này để lấp đầy bộ nhớ d�
 "Một trong những ứng dụng của việc lấy mẫu là để ước lượng các giá trị thống kê tổng hợp như tổng, trung bình, trung vị, etc."
 "Độ chính xác của những giá trị đó thường đc định lượng bằng các bất đẳng thức đuôi".
 
-- Gọi $X$ là một biến ngẫu nhiên với một phân phối xác suất: $f_X(x)$, kì vọng $\E[X]$, và phương sai $\text{Var}[X]$.
+- Gọi $X$ là một biến ngẫu nhiên với một phân phối xác suất: $f_X(x)$, kì vọng $\E[X]$, và phương sai $\text{Var}[X]$, chúng ta có các bất đẳng thức sau.
 	- Bất đẳng thức Markov: Nếu $X$ là một biến ngẫu nhiên chỉ nhận các giá trị không âm, thì với bất kì hằng số $\a$ thỏa mãn $\E[X]<\a$, thì điều sau đây luôn đúng: $$P(X>\a) \le \frac { \E [X]}{\a} \iff \E[X] \ge \a P(X>\a)$$
 	- Bất đẳng thức Chebychev: Nếu $X$ là một biến ngẫu nhiên bất kì, thì, với mọi hằng số $\a$, thì điều sau đây luôn đúng: $$P(|X-\E[X]> \a |) \le \frac {\text{Var}[X]}{\a^2}$$
 	- Cận Chernoff cho đuôi dưới: Nếu $X$ là một biến ngẫu nhiên có thể biểu diễn như là tổng của $n$ biến ngẫu nhiên độc lập nhị phân (Bernoulli), mỗi biến có giá trị bằng $1$ với xác suất $p_i$: $$X = \sum_{i=1}^n X_i$$, thì với bất kì $\delta \in (0,1)$, chúng ta có: $$P(X < (1-\delta)\E[X]) < e^{-\E[X]\delta^2/2}$$
@@ -124,17 +124,94 @@ Hạn chế:
 ## 2.2.2 Các cấu trúc dữ liệu
 ### 2.2.2.1 Bộ lọc Bloom
 Một bộ lọc Bloom $\mathcal B$ bao gồm:
-- 1. Một mảng gồm $n$ bits, khởi tạo tất cả đều bằng $0$.
-- 2. Một tập hợp các hàm băm $h_1, h_2, \cdots, h_k$. Mỗi hàm băm ánh xạ giá trị "khóa" vào $n$ ô chứa, tương ứng với $n$ bits của mảng trên.
-- 3. Một tập $\mathcal S$ với $m$ khóa.
-![[Pasted image 20241120122727.png]]
+- 1. Một mảng gồm $m$ bits, khởi tạo tất cả đều bằng $0$.
+- 2. Một tập hợp các hàm băm $h_1, h_2, \cdots, h_w$. Mỗi hàm băm ánh xạ giá trị "khóa" vào $m$ ô chứa, tương ứng với $m$ bits của mảng trên.
+- 3. Một tập $\mathcal S$ với $n$ khóa.
 
-Bổ đề: Cho một bộ lọc Bloom $\mathcal B$ với $n$ phần tử và $k$ hàm băm khác nhau. Gọi $\mathcal S$ là một tập hợp chứa $m$ khóa. Nếu một phần tử $x$ chưa từng xuất hiện trong tập $\mathcal S$, thì xác suất $F$ để phần tử $x$ đó được báo cáo là dương tính giả được cho bởi công thức: $$F = \Bigg[1 - \Bigg(1 - \frac 1 n\Bigg)^{k-m} \Bigg]^k$$
+Quy trình lọc: 
+- Khởi tạo mảng toàn bộ thành $0$
+- Với mỗi $x \in \mathcal S$: $h_i(x) \leftarrow 1$ 
+
+![[Pasted image 20241120130201.png]]
+
+
+Kiểm tra xem một khóa ở trong bộ lọc hay chưa:
+- Dùng hàm băm để tìm vị trí đánh dấu
+- Nếu tất cả vị trí = 1, thì có lẽ (chưa chắc) phần tử đã xuất hiện hay chưa
+- Nếu có ít nhất 1 vị trí bằng 0, chắc chắn phần tử chưa từng xuất hiện
+
+Bổ đề: Nếu một phần tử $x$ chưa từng xuất hiện trong tập $\mathcal S$, thì xác suất $F$ để phần tử $x$ đó bị coi là dương tính giả được cho bởi công thức: $$F = \Bigg[1 - \Bigg(1 - \frac 1 m\Bigg)^{w-n} \Bigg]^w$$
 "dương tính giả trong trường hợp này là: khi bộ lọc báo phần tử đã ở trong S trong khi nó ko hề có".
+"Điểm đặc biệt là bộ lọc Bloom ko có âm tính giả, nghĩa là nếu nó chưa xuất hiện thì chắc chắn nó chưa xuất hiện, nếu "
+
+**Lợi ích**: Nhanh và tiết kiệm bộ nhớ
+**Hạn chế**: Dương tính giả và ko thể xóa phần tử
+
+Ứng dụng:
+- Lọc phần tử trùng lặp
+- Kiểm tra spam email
+- Kiểm tra URL trong danh sách cấm
 ### 2.2.2.2 Count-min sketch
+"Count-Min Sketch là một cấu trúc dữ liệu xác suất dùng để ước lượng tần suất xuất hiện của các phần tử trong luồng dữ liệu một cách hiệu quả với bộ nhớ hạn chế."
+
+![[Pasted image 20241120133430.png]]
+
+Count-min Sketch bao gồm: 
+- $w$ mảng số nguyên cỡ $m$ -> Không gian nhớ $O(mw)$
+- Mảng thứ $i$ tương ứng với một hàm băm thứ $i$ $h_i(\cdot)$ 
+- Các hàm băm $h_1(⋅),…,h_w(⋅)$ hoàn toàn độc lập với nhau, nhưng chỉ độc lập từng cặp đối với các đối số khác nhau. Nói cách khác, với bất kỳ hai giá trị $x_1$ và $x_2​$, $h_i(x_1)$ và $h_i(x_2)$ là độc lập.
+
+Quy trình cập nhật Count-min Sketch:
+- Tất cả các ô trong sketch được khởi tạo bằng $0$
+- Tại hàm băm $i$, chúng ta sẽ cập nhật $(i, h_i(x)) \leftarrow (i, h_i(x)) + 1$ 
+
+Ước lượng tần suất xuất hiện với Count-min Sketch:
+- Đưa input $x$ vào các hàm băm, nhận vị trí trong từng hàm
+- Lấy giá trị nhỏ nhất.
+
+Ưu điểm: Tiết kiệm bộ nhớ, dễ sử dụng
+Nhược điểm: Ước lượng sai lệch, không chính xác
+
+Ứng dụng: Ước lượng tần suất xuất hiện của phần tử
 ### 2.2.2.3 Ước lượng các mô-men và Thuật toán AMS
+**Tổng quan về mô men**:
+Giả sử tập vũ trụ thể được sắp thứ tự để ta có thể nói về phần tử thứ $i$ với bất kỳ $i$ nào. Gọi $m_i$ là số lần xuất hiện của phần tử thứ $i$ với bất kỳ $i$ nào, khi đó, mô men bậc $k$ được tính bằng:
+$$M = \sum_{i}(m_i)^k$$
+Mô men bậc 0: Độ dài của luồng
+Mô men bậc 1: Tổng của các phần tử trong luồng, $1/M$ là trung bình phần tử trong luồng.
+Mô men bậc 2: kết hợp mô men bậc 1 và bậc 2 -> Phương sai
+Mô men bậc 3: Giúp tính độ xiên
+Mô men bạc 4: Giúp tính độ nhọn
+....
+
+"Các mô men bậc cao hơn sẽ cung cấp các thông tin chi tiết hơn về phân phối phần tử trong luồng, giúp đánh giá mức độ phân tán hay tập trung hay phân tán của giá trị"
+
+**Mô men tần suất bậc 2**:
+Với $f_i$ là tần suất xuất hiện của phần tử $i$ trong luồng, ta có:
+$$
+F_2 = \sum_{i=1}^{n} f_i^2 
+$$
+-> Đo độ xiên của dữ liệu
+
+**Alon-Matias-Szegedy (AMS) sketch**
+Thuật toán: 
+- 1. Dùng hàm băm ngẫu nhiên: Hàm băm độc lập 4 chiều $h(i)$ ánh xạ phần tử thứ $i$ vào $\{-1, 1\}$  một cách ngẫu nhiên đồng nhất
+- 2. Cập nhật luồng: Duy trì một bộ đếm $Z$, khởi tạo bằng $0$
+	- Khi $i$ xuất hiện trong luồng với độ tăng $c$, cập nhật $Z$: $$Z \leftarrow Z + c \cdot h(i)$$
+- 3. Ước lượng $F_2$: $$F_2 \approx Z^2$$
+
+Ưu điểm: 
+Ước lượng chính xác hơn cho phương thai
+Nhược điểm: 
+Không thể trả về chính xác, độ phức tạp cao
 ### 2.2.2.4 Đếm các phần tử duy nhất và thuật toán Flajolet-Martin
 "\[flaʒɔlɛ\]" 
+
+Thuật toán:
+- 1. Chọn một hàm băm $h(x)$ ánh xạ phần tử vào khoảng số nguyên lớn: $[0, 2^L -1]$
+- 2. Theo dõi bit 1 có trọng số thấp nhất
+
+
 #### 2.2.2.5 Đếm số lượng 1 trong 1 cửa sổ và thuật toán DGIM
 ### 2.2.2.6 Của sổ suy giảm
 ## 2.3 So sánh
