@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Seminar khai phá luồng dữ liệu.md",
+                "file": "Notes/Trung/Lọc và Lấy mẫu luồng dữ liệu.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Seminar khai phá luồng dữ liệu"
+              "title": "Lọc và Lấy mẫu luồng dữ liệu"
             }
           }
         ]
@@ -79,8 +79,7 @@
               "title": "Book3-MiningOfMassiveDatasets"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -233,21 +232,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ef6f77b747ed979f",
+  "active": "46939d040bc31dc1",
   "lastOpenFiles": [
     "Main note for the seminar..md",
-    "conflict-files-obsidian-git.md",
     "books/Book3-MiningOfMassiveDatasets.pdf",
-    "Notes/NOTE 4+3 Tuấn Anh.md",
     "books/Book2-DataMiningTheTextbook.pdf",
+    "Notes/Trung/Lọc và Lấy mẫu luồng dữ liệu.md",
+    "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
+    "Notes/NOTE 4+3 Tuấn Anh.md",
+    "Notes/Linh 7+8/Phần 8. Streaming Classification.md",
+    "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
     "Seminar khai phá luồng dữ liệu.md",
+    "conflict-files-obsidian-git.md",
     "Pasted image 20241120133430.png",
     "Pasted image 20241120130201.png",
     "Pasted image 20241120122727.png",
     "Untitled.md",
     "Untitled.canvas",
-    "Notes/Linh 7+8/Phần 8. Streaming Classification.md",
-    "Notes/Linh 7+8/Phần 7. Streaming Outlier Detection.md",
     "Notes/Linh 7+8",
     "Pasted image 20241119201827.png",
     "2024-11-18.md",
@@ -259,10 +260,8 @@
     "Notes/Chính/Frequent Pattern Mining in Data Streams.md",
     "Notes/Chính/CluStream Algorithm.md",
     "Notes/Chính/Synopsis Structures.md",
-    "Notes/Trung/Lọc và Lấy mẫu luồng dữ liệu.md",
     "Notes/Chính",
     "Notes/Sáng/Yêu cầu..md",
-    "Notes/Trung/Giới thiệu về luồng dữ liệu.md",
     "Pasted image 20241118013304.png",
     "README.md",
     "Notes/Trung",

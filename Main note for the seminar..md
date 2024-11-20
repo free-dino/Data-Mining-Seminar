@@ -209,9 +209,16 @@ Không thể trả về chính xác, độ phức tạp cao
 
 Thuật toán:
 - 1. Chọn một hàm băm $h(x)$ ánh xạ phần tử vào khoảng số nguyên lớn: $[0, 2^L -1]$
-- 2. Theo dõi bit 1 có trọng số thấp nhất
+- 2. Theo dõi bit 1 có trọng số thấp nhất:
+	- Với mỗi giá trị của hàm băm, tìm vị trí bên phải nhất của bit 1.
+	- Theo dõi điểm $R_\max$ là vị trí max của các vị trí vừa tìm được.
+	- Tuy nhiên có thể ước lượng $R_\max$: $$\E[R_\max]=\log_2 (\phi n)$$, với $\phi = 0.77351$.
+- 3. Ước lượng số lượng các phần tử duy nhất: $$D = \frac{2^{R_\max}}{\phi}$$
+Ưu điểm: Không gian lưu trữ nhỏ, hiệu quả cho dữ liệu lớn
+Nhược điểm: Ước lượng sai lệch, không thể truy vấn các phần tử
 
 
-#### 2.2.2.5 Đếm số lượng 1 trong 1 cửa sổ và thuật toán DGIM
+### 2.2.2.5 Đếm số lượng 1 trong 1 cửa sổ và thuật toán DGIM
+"Giả sử chúng ta muốn đếm chính xác số lượng số 1 trong k bits cuối với k bé hơn hoặc bằng N"
 ### 2.2.2.6 Của sổ suy giảm
 ## 2.3 So sánh
