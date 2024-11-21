@@ -5,10 +5,6 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-<<<<<<< HEAD
-  "collapse-color-groups": true,
-  "colorGroups": [],
-=======
   "collapse-color-groups": false,
   "colorGroups": [
     {
@@ -22,13 +18,19 @@
       "query": "file:Main note for the seminar",
       "color": {
         "a": 1,
-        "rgb": 110288
+        "rgb": 5429216
+      }
+    },
+    {
+      "query": "RE",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
       }
     }
   ],
->>>>>>> origin/main
-  "collapse-display": true,
-  "showArrow": false,
+  "collapse-display": false,
+  "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
@@ -37,10 +39,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1,
-<<<<<<< HEAD
-  "close": false
-=======
+  "scale": 0.5424949306348095,
   "close": true
->>>>>>> origin/main
 }
