@@ -48,8 +48,6 @@ Với một một mẫu dự trữ size $k$, $k$ điểm dữ liệu đầu tiê
 - Nếu được chèn vào thì ngẫu nhiên loại bỏ một trong $k$ điểm trong mẫu dự trữ, nhường chỗ cho điểm mới.
 
 ![[Pasted image 20241119201827.png]]
-**Bổ đề**: 
-Sau khi $n$ điểm của luồng dữ liệu đến bộ xử lý, xác suất mà bất kì điểm dữ liệu nào được cho vào mẫu dự trữ là như nhau và bằng $k/n$.
 
 ### 2.1.1 Xử lý chuyển dịch khái niệm:
 **Bias function**: 
@@ -69,7 +67,7 @@ Bắt đầu: một bộ nhớ dự trữ trống.
 Chúng ta sẽ dùng chính sách (policy) này để lấp đầy bộ nhớ dự trữ:
 - 1. Khi điểm thứ $n+1$ xuất hiện:
 	- Chèn điểm đó vào bộ nhớ dự trữ với xác suất $\ld \cdot k$ 
-	- Tung một đồng xu với xác xuất thành công: $F(n) \in [0,1]$ ~ tỉ lệ bộ nhớ đã bị lấp đầy.
+	- Tung một đồng xu với xác xuất thành công: $F(n) \in \{0,1\}$ ~ tỉ lệ bộ nhớ đã bị lấp đầy.
 		- Nếu thành công: Chọn ngẫu nhiên một điểm trong bộ nhớ và thay thế với điểm mới
 		- Nếu thất bại: Thêm điểm mới vào bộ nhớ và ko cần xóa
 * 2. 1. Bộ nhớ đc lấp đầy nhanh lúc ban đầu và chậm lại khi gần đạt dung lượng tối đa.
